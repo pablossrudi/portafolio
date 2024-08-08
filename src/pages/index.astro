@@ -8,7 +8,7 @@ import Layout from "../layouts/Layout.astro";
     <section class="home" id="section1">
       <div class="div1">
         <h1><strong>Pablo Ulloa Lizama</strong></h1>
-        <h2><b>Fullstack Developer</b></h2>
+        <h2><b>FullStack Developer</b></h2>
         <div class="btns_home">
           <a class="btn_github" href="https://github.com/pablossrudi" target="_blank">
             <img
@@ -159,7 +159,7 @@ import Layout from "../layouts/Layout.astro";
               <br />
               <span>Python</span>
             </div>
-            <div class="icons">
+            <!-- <div class="icons">
               <img
                 width="50"
                 height="50"
@@ -168,7 +168,7 @@ import Layout from "../layouts/Layout.astro";
               />
               <br />
               <span>WordPress</span>
-            </div>
+            </div> -->
             <div class="icons">
               <img
                 width="50"
@@ -240,19 +240,6 @@ import Layout from "../layouts/Layout.astro";
       <div class="div4">
         <h2>Proyectos</h2>
       </div>
-    </section>
-    <section class="contact" id="section5">
-      <!-- <div class="contact"> -->
-      <form class="form" action="">
-        <h2 class="title">Contactar</h2>
-        <input type="text" placeholder="Nombre" />
-
-        <input type="text" placeholder="Email" />
-
-        <textarea name="mensaje" id="" placeholder="Mensaje"></textarea>
-        <button>Submit</button>
-      </form>
-      <!-- </div> -->
     </section>
   </main>
 </Layout>
@@ -575,83 +562,6 @@ import Layout from "../layouts/Layout.astro";
     margin-top: 45px;
     border-radius: 12px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-  }
-  .contact {
-    display: flex;
-    /* width: 100%; */
-    /* height: 50vh; */
-    padding-inline: 7.5%;
-    /* justify-content: center;
-    align-items: center; */
-    margin-top: -1px;
-    margin-right: -7px;
-    margin-left: -8px;
-    background: linear-gradient(
-      200.3deg,
-      rgb(19, 21, 26) 59.8%,
-      rgb(49, 46, 97) 90.3%
-    );
-  }
-  .form {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-    width: 300px;
-    background: rgba(61, 58, 78, 0.5);
-    backdrop-filter: blur(20px) saturate(180%);
-    padding: 20px;
-    margin-top: 45px;
-    border-radius: 10px;
-    box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
-  }
-
-  .form .title {
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .form input {
-    background-color: rgba(61, 58, 78, 0.5);
-    outline: 0;
-    border: 1px solid;
-    padding: 8px 14px;
-    border-radius: 8px;
-    border-color: #3d3a4e;
-    width: 90%;
-    height: 50px;
-  }
-
-  .form textarea {
-    background-color: rgba(61, 58, 78, 0.5);
-    border-radius: 8px;
-    height: 100px;
-    width: 90%;
-    resize: none;
-    outline: 0;
-    padding: 8px 14px;
-    border: 1px solid;
-    border-color: #3d3a4e;
-  }
-
-  .form button {
-    align-self: flex-end;
-    padding: 8px;
-    outline: 0;
-    border: 0;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: royalblue;
-    color: #fff;
-    cursor: pointer;
   }
   @media (max-width: 992px) {
     .div2 {
