@@ -1,0 +1,171 @@
+<section class="home" id="section1">
+    <div class="div1">
+        <div class="nombre">
+            <h1><strong>Pablo Ulloa Lizama</strong></h1>
+        </div>
+        <div class="prof">
+            <h2><b>Full Stack Developer</b></h2>
+        </div>
+        
+        <div class="btns_home">
+            <a
+                class="btn_github"
+                href="https://github.com/pablossrudi"
+                target="_blank"
+            >
+                <img
+                    class="icon_github"
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png"
+                    alt="github"
+                />
+            </a>
+            <!-- <button class="descargar"> -->
+            <a class="descargar" href="/assets/Curriculum.pdf" download
+                ><img
+                    class="icon_descargar"
+                    width="20"
+                    height="20"
+                    src="https://img.icons8.com/metro/20/ffffff/download.png"
+                    alt="download"
+                /><span class="descargar-content">DESCARGAR CV</span></a
+            >
+            <!-- </button> -->
+        </div>
+    </div>
+    <!-- <img class="gif" src="/assets/yo_escalado.gif" alt="" /> -->
+</section>
+
+<style>
+    .home {
+        display: flex;
+        /* margin: -8px; */
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(
+            38.3deg,
+            rgb(19, 21, 26) 59.8%,
+            rgb(49, 46, 97) 90.3%
+        );
+    }
+
+    .div1 {
+        /* display: flex; */
+        flex-direction: column;
+        padding-inline: 8%;
+        text-align: left;
+        z-index: 1;
+    }
+
+    .nombre {
+        margin-top: -60px;
+    }
+
+    .prof {
+        margin-top: -50px;
+    }
+
+    .btns_home {
+        display: flex;
+        flex-direction: row;
+        margin-top: -80px;
+    }
+    .descargar {
+        margin-top: 3.5rem;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        height: 3.5rem;
+        width: 147px;
+        padding: 0 2rem;
+        margin-left: 20px;
+        border-radius: 0.5rem;
+        background: #3d3a4e;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    .descargar:hover::before {
+        transform: scaleX(1);
+    }
+    .descargar-content {
+        position: relative;
+        font-size: 0.95rem;
+        color: #fff;
+        /* z-index: 1; */
+    }
+
+    .descargar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        width: 100%;
+        height: inherit;
+        border-radius: inherit;
+        background: linear-gradient(
+            82.3deg,
+            rgba(150, 93, 233, 1) 10.8%,
+            rgba(99, 88, 238, 1) 94.3%
+        );
+        transition: all 0.475s;
+    }
+    .btn_github {
+        margin-top: 3.5rem;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        height: 3.5rem;
+        width: 0;
+        padding: 0 2rem;
+        border-radius: 0.5rem;
+        background: #3d3a4e;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    .btn_github:hover::before {
+        transform: scaleX(1);
+    }
+    .btn_github::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+        width: 100%;
+        height: inherit;
+        border-radius: inherit;
+        background: linear-gradient(
+            82.3deg,
+            rgba(150, 93, 233, 1) 10.8%,
+            rgba(99, 88, 238, 1) 94.3%
+        );
+        transition: all 0.475s;
+    }
+    .icon_descargar {
+        margin-right: 20px;
+        margin-left: -10px;
+        z-index: 1;
+    }
+    .icon_github {
+        z-index: 1;
+    }
+    .container-titulos {
+        display: flex;
+        margin-left: 12px;
+        align-items: center;
+        margin-top: 3.5rem;
+        margin-bottom: 1.8rem;
+    }
+
+</style>

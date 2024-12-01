@@ -1,0 +1,134 @@
+---
+import astroLogo from "../assets/astro.svg";
+import background from "../assets/background.svg";
+---
+
+<header class="header">
+	<nav>
+		<ul>
+			<li>
+				<a href="#section1"
+					><img
+						width="20"
+						height="20"
+						src="https://img.icons8.com/fluency-systems-filled/20/ffffff/home.png"
+						alt="home"
+					/>Home</a
+				>
+			</li>
+			<li>
+				<a href="#section2"
+					><img
+						width="20"
+						height="20"
+						src="https://img.icons8.com/fluency-systems-filled/20/ffffff/user.png"
+						alt="user"
+					/>Sobre Mí</a
+				>
+			</li>
+			<li>
+				<a href="#section4"
+					><img
+						width="20"
+						height="20"
+						src="https://img.icons8.com/material-rounded/20/ffffff/briefcase.png"
+						alt="briefcase"
+					/>Proyectos</a
+				>
+			</li>
+			<li>
+				<a href="#section3"
+					><img
+						width="20"
+						height="20"
+						src="https://img.icons8.com/material/20/ffffff/group-of-projects.png"
+						alt="group-of-projects"
+					/>Habilidades</a
+				>
+			</li>
+			<li>
+				<a href="#section5"
+					><img
+						width="20"
+						height="20"
+						src="https://img.icons8.com/fluency-systems-filled/20/ffffff/phone.png"
+						alt="phone"
+					/>Contactar</a
+				>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<style>
+	.header {
+		position: fixed;
+		width: 100%;
+		background: rgba(19, 21, 26, 0.7);
+		backdrop-filter: blur(20px) saturate(180%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 60px;
+		padding-bottom: 5px;
+		/* padding: 10px; */
+		/* margin-left: -28px; */
+		/* margin-top: -100px; */
+		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+		z-index: 2;
+	}
+
+	ul{
+		display: flex;
+		align-content: center;
+	}
+
+	li {
+		display: inline-block;
+		padding: 0 20px;
+	}
+
+	a {
+		position: relative;
+		font-size: 700;
+		color: white;
+		font-weight: 500;
+		text-decoration: none;
+		/* margin-left: 20px; */
+		transition: 0.475s;
+	}
+	a:hover {
+		color: rgba(99, 88, 238, 1);
+		/* background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    ); */
+	}
+	a::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		width: 0%;
+		height: 2px;
+		background: rgba(150, 93, 233, 1);
+		transition: 0.475s;
+	}
+
+	a:hover::after {
+		width: 100%;
+		background: rgba(99, 88, 238, 1);
+	}
+
+	img {
+		width: 0;
+		color: white;
+	}
+
+	@media screen and (max-height: 368px) {
+	}
+
+	@media screen and (max-width: 768px) {
+	}
+</style>
