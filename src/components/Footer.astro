@@ -38,12 +38,13 @@
         width: 99%;
     }
     .footer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem; 
+        justify-items: center;
     }
     .icon {
-        margin-top: 5%;
-        margin-right: 20%;
+        margin-top: 15px;
+        /* margin-right: 20% */
     }
 </style>
