@@ -3,7 +3,7 @@
         <h3><strong>Habilidades</strong></h3>
         <div class="container_cards">
             <div class="container_frontend">
-                <div class="card_frontend">
+                <div class="card_frontend oscuro_claro_card">
                     <h3>Frontend</h3>
                     <div class="container_icons">
                         <div class="icons">
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="container_cards_r">
-                <div class="card_r">
+                <div class="card_r oscuro_card">
                     <h3>Lenguajes</h3>
                     <div class="container_icons_r">
                         <div class="icons">
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card_r">
+                <div class="card_r oscuro_claro_card">
                     <h3>Backend</h3>
                     <div class="container_icons_r">
                         <div class="icons">
@@ -149,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card_r">
+                <div class="card_r claro_card">
                     <h3>Herramientas</h3>
                     <div class="container_icons_r">
                         <div class="icons">
@@ -206,7 +206,7 @@
         align-items: center;
         background: linear-gradient(
             0deg,
-            rgb(19, 21, 26) 38.8%,
+            rgb(19, 21, 26) 25%,
             rgb(49, 46, 97) 94.3%
         );
     }
@@ -227,8 +227,6 @@
         width: 40%;
     }
     .card_frontend {
-        background: rgba(49, 46, 97, 0.5);
-        backdrop-filter: blur(20px) saturate(180%);
         padding-left: 4%;
         padding-right: 6%;
         padding-bottom: 0.8%;
@@ -245,8 +243,6 @@
         width: 60%;
     }
     .card_r {
-        background: rgba(49, 46, 97, 0.5);
-        backdrop-filter: blur(20px) saturate(180%);
         padding-left: 4%;
         padding-right: 6%;
         padding-bottom: 0.8%;
@@ -255,6 +251,23 @@
         border-radius: 8px;
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
     }
+    .oscuro_card {
+        background: rgba(19, 21, 26, 0.5);
+        backdrop-filter: blur(20px) saturate(180%);
+    }
+    .oscuro_claro_card {
+        background: linear-gradient(
+            180deg,
+            rgba(19, 21, 26, 0.5) 30.8%,
+            rgba(49, 46, 97, 0.5) 94.3%
+        );
+        backdrop-filter: blur(20px) saturate(180%);
+    }
+    .claro_card {
+        background: rgba(49, 46, 97, 0.5);
+        backdrop-filter: blur(20px) saturate(180%);
+    }
+    
     .container_icons {
         margin-top: 2.5rem;
         margin-left: 1rem;
