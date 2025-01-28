@@ -1,0 +1,146 @@
+
+.sobre_mis_habilidades {
+    /* background: rgba(19, 21, 26, 0.7); */
+    background: rgba(19, 21, 26, 0.5);
+    backdrop-filter: blur(20px) saturate(180%);
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 0.9%;
+    margin-top: 2.5%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.05);
+}
+
+.container_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.no_hidden {
+    display: flex;
+}
+
+.button {
+    display: none;
+
+}
+
+
+.educacion {
+    /* background: rgba(49, 46, 97, 0.5); */
+    background: linear-gradient(
+        180deg,
+        rgba(49, 46, 97, 0.5) 30.8%,
+        rgba(19, 21, 26, 0.5) 74.3%
+    );
+    backdrop-filter: blur(20px) saturate(180%);
+    padding-left: 4%;
+    padding-right: 6%;
+    padding-bottom: 0.8%;
+    margin-left: 15%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.05);
+}
+
+.footerA {
+    position: absolute;
+    width: 94%;
+    bottom: 2%;
+}
+
+.container-titulos {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.descargar-titulos {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 210px;
+    padding: 0 2rem;
+    margin-left: -10px;
+    border-radius: 0.5rem;
+    background: #3d3a4e;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.descargar-titulos:hover::before {
+    transform: scaleX(1);
+}
+
+.descargar-titulos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+        82.3deg,
+        rgba(150, 93, 233, 0.5) 0%,
+        rgba(99, 88, 238, 1) 100%
+    );
+    transition: all 0.475s;
+}
+.descargar-content {
+    position: relative;
+    font-size: 0.95rem;
+    color: #fff;
+    /* z-index: 1; */
+}
+.icon_descargar {
+    margin-right: 20px;
+    margin-left: -10px;
+    z-index: 1;
+}
+
+@media (max-width: 1280px) {
+    .button {
+        display: flex;
+        height: 50px;
+        width: 50px;
+        margin-top: 5px;
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+    .educacion {
+        background: rgba(49, 46, 97, 0.5);
+        margin-left: 0%;
+        margin-top: 5%;
+        /* height: 26vh; */
+    }
+    .footerA {
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerA {
+        margin-left: 3%;
+    }
+}
+
