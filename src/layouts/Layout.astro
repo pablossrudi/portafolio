@@ -12,10 +12,10 @@ import Footer from "../components/Footer.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body>		
 		<Header />
 		<slot />
-		<Footer />
+		<Footer />	
 	</body>
 </html>
 
@@ -28,6 +28,16 @@ import Footer from "../components/Footer.astro";
 		width: 100%;
 		height: 100%;
 	}
+	.bgSection {
+		position: absolute; 
+		width: 100%;
+		height: 100vh;
+        background-image: radial-gradient(black 1px, transparent 1px);
+        background-size: 1.3rem 1.3rem;
+        background-position:
+            0 0,
+            0.65rem 0.65rem;
+    }
 	h1 {
 		color: white;
 		font-size: 64px;

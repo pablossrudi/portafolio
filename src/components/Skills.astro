@@ -207,7 +207,7 @@
         background: linear-gradient(
             0deg,
             rgb(19, 21, 26) 25%,
-            rgb(49, 46, 97) 94.3%
+            rgb(34, 33, 50) 94.3%
         );
     }
     .div4 {
@@ -234,7 +234,7 @@
         margin-top: 1.8%;
         margin-bottom: 1.8%;
         border-radius: 8px;
-        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 10px rgba(175, 174, 174, 0.05);
     }
 
     .container_cards_r {
@@ -249,7 +249,7 @@
         margin-top: 1%;
         margin-bottom: 1%;
         border-radius: 8px;
-        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 10px rgba(175, 174, 174, 0.05);
     }
     .oscuro_card {
         background: rgba(19, 21, 26, 0.5);
@@ -313,5 +313,40 @@
             width: 35px;
             height: 35px;
         }
+    }
+
+    @media (max-width: 1256px) {
+        .container_cards {
+            width: 100%;
+            flex-direction: column;
+        }
+        .container_frontend {
+            /* display:inline; */
+            width: 100%;
+        } 
+        .card_frontend {
+            margin-right: 0;
+            padding-bottom: 5%;
+        }
+        .container_cards_r {
+            width: 100%;
+        }
+
+        .oscuro_card {
+            background: rgba(49, 46, 97, 0.5);
+            backdrop-filter: blur(20px) saturate(180%);
+        }
+
+        .oscuro_claro_card {
+            background: rgba(49, 46, 97, 0.5);
+            backdrop-filter: blur(20px) saturate(180%);
+        }
+
+        @media (max-width: 435px){
+            .card_frontend {
+            padding-bottom: 15%;
+        }
+        }
+
     }
 </style>
