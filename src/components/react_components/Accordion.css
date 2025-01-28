@@ -1,6 +1,5 @@
 
 .sobre_mis_habilidades {
-    /* background: rgba(19, 21, 26, 0.7); */
     background: rgba(19, 21, 26, 0.5);
     backdrop-filter: blur(20px) saturate(180%);
     padding-left: 4%;
@@ -127,7 +126,7 @@
         cursor: pointer;
     }
     .educacion {
-        background: rgba(49, 46, 97, 0.5);
+        background: rgba(19, 21, 26, 0.5);
         margin-left: 0%;
         margin-top: 5%;
         /* height: 26vh; */
