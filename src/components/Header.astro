@@ -1,63 +1,30 @@
 ---
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
+import SideBarButton from "./react_components/SideBarButton";
 ---
 
 <header class="header">
 	<nav>
 		<ul>
 			<li>
-				<a href="#home"
-					><img
-						width="20"
-						height="20"
-						src="https://img.icons8.com/fluency-systems-filled/20/ffffff/home.png"
-						alt="home"
-					/>Home</a
-				>
+				<a href="#home">Home</a>
 			</li>
 			<li>
-				<a href="#sobre_mi"
-					><img
-						width="20"
-						height="20"
-						src="https://img.icons8.com/fluency-systems-filled/20/ffffff/user.png"
-						alt="user"
-					/>Sobre Mí</a
-				>
+				<a href="#sobre_mi">Sobre Mí</a>
 			</li>
 			<li>
-				<a href="#proyectos"
-					><img
-						width="20"
-						height="20"
-						src="https://img.icons8.com/material-rounded/20/ffffff/briefcase.png"
-						alt="briefcase"
-					/>Proyectos</a
-				>
+				<a href="#proyectos">Proyectos</a>
 			</li>
 			<li>
-				<a href="#habilidades"
-					><img
-						width="20"
-						height="20"
-						src="https://img.icons8.com/material/20/ffffff/group-of-projects.png"
-						alt="group-of-projects"
-					/>Habilidades</a
-				>
+				<a href="#habilidades">Habilidades</a>
 			</li>
 			<li>
-				<a href="#contactar"
-					><img
-						width="20"
-						height="20"
-						src="https://img.icons8.com/fluency-systems-filled/20/ffffff/phone.png"
-						alt="phone"
-					/>Contactar</a
-				>
+				<a href="#contactar">Contactar</a>
 			</li>
 		</ul>
 	</nav>
+	<SideBarButton client:load />
 </header>
 
 <style>
@@ -71,16 +38,12 @@ import background from "../assets/background.svg";
 		align-items: center;
 		height: 60px;
 		padding-bottom: 5px;
-		/* padding: 10px; */
-		/* margin-left: -28px; */
-		/* margin-top: -100px; */
 		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 		z-index: 2;
 	}
 
-	ul{
+	ul {
 		display: flex;
-		/* align-content: center; */
 		margin-left: -40px;
 	}
 
@@ -95,16 +58,10 @@ import background from "../assets/background.svg";
 		color: white;
 		font-weight: 500;
 		text-decoration: none;
-		/* margin-left: 20px; */
 		transition: 0.475s;
 	}
 	a:hover {
 		color: rgba(99, 88, 238, 1);
-		/* background: linear-gradient(
-      82.3deg,
-      rgba(150, 93, 233, 1) 10.8%,
-      rgba(99, 88, 238, 1) 94.3%
-    ); */
 	}
 	a::after {
 		content: "";
@@ -127,9 +84,14 @@ import background from "../assets/background.svg";
 		color: white;
 	}
 
-	@media screen and (max-height: 368px) {
-	}
+	@media (max-width: 560px) {
+		.header {
+			justify-content:end;
+			align-items: center;
+		}
 
-	@media screen and (max-width: 768px) {
+		ul {
+			display: none;
+		}
 	}
 </style>
