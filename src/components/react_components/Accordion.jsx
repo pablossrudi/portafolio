@@ -20,13 +20,23 @@ const AccordionH = () => {
     }, []);
 
     return (
-        <div class="sobre_mis_habilidades">
-            <div class="container_top">
+        <div className="sobre_mis_habilidades">
+            <div className="container_top">
                 <h3>Sobre mis habilidades</h3>
-                <button class="button" onClick={() => setHidden(!hidden)}>hola</button>
+                <button className="button" onClick={() => setHidden(!hidden)}>
+                    {
+                        hidden ? (
+                            <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/chevron-down.png" alt="chevron-down"/>
+                        )    
+                        : 
+                        (
+                        <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/chevron-up.png" alt="chevron-up"/>
+                        )
+                    }
+                </button>
             </div>
 
-            <div class={`no_hidde ${hidden ? "hidden" : ""}`}>
+            <div className={`no_hidde ${hidden ? "hidden" : ""}`}>
                 <p>
                     Me esfuerzo por mantenerme actualizado con las últimas
                     tecnologías y mejores prácticas. Esto me permite aportar
@@ -72,14 +82,20 @@ const AccordionE = () => {
 
         
     }, []);
-    return (
-        <div class="educacion">
-            <div class="container_top">
+    return (   
+        <div className="educacion">
+            <div className="container_top">
                 <h3>Educación</h3>
-                <button class="button" style={{marginRight: '-2.5%'}} onClick={() => setHidden(!hidden)}>hola</button>
+                <button className="button" style={{marginRight: '-2.5%'}} onClick={() => setHidden(!hidden)}>
+                    {
+                        hidden ? <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/chevron-down.png" alt="chevron-down"/>    
+                        : <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/ffffff/chevron-up.png" alt="chevron-up"/>    
+                    }
+                    
+                </button>
             </div>
 
-            <div class={`no_hidde ${hidden ? "hidden" : ""}`}>
+            <div className={`no_hidde ${hidden ? "hidden" : ""}`}>
             <ul>
                         <li>
                             <div>
@@ -95,23 +111,23 @@ const AccordionE = () => {
                         </li>
                     </ul>
 
-                    <div class="footerA">
-                        <div class="container-titulos">
-                            <a class="descargar-titulos" href="" target="_blank"
+                    <div className="footerA">
+                        <div className="container-titulos">
+                            <a className="descargar-titulos" href="" target="_blank"
                                 ><img
-                                    class="icon_descargar"
+                                    className="icon_descargar"
                                     width="25"
                                     height="25"
                                     src="https://img.icons8.com/ios-filled/50/ffffff/google-drive--v2.png"
                                     alt="google-drive--v2"
-                                /><span class="descargar-content"
+                                /><span className="descargar-content"
                                     >Titulos y certificados</span
                                 ></a
                             >
                         </div>
                     </div>
             </div>
-        </div>
+        </div>   
     );
 }
 

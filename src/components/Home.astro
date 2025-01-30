@@ -49,11 +49,22 @@
             rgb(49, 46, 97) 90.3%
         );
     }
+    @keyframes slideInLeft {
+        0% {
+            transform: translateX(-10%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 
     .div1 {
         padding-inline: 8%;
         margin-left: 5%;
         text-align: left;
+        animation: slideInLeft 1s ease-out;
         z-index: 1;
     }
 

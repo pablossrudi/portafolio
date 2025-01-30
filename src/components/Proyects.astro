@@ -152,120 +152,6 @@
                     </div>
                 </section>
             </div>
-            <div class="card">
-                <div>
-                    <img
-                        class="imagen"
-                        src="src/assets/images/seutils.png"
-                        alt=""
-                    />
-                </div><section class="container_description">
-                    <div class="header">
-                        <h4>titulo</h4><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div><div class="descripcion">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Veniam neque quisquam officiis tempora.
-                            Aliquid quae sed cupiditate earum! Vel provident
-                            animi numquam architecto vitae placeat tempora
-                            voluptatum nesciunt sapiente laudantium!
-                        </p>
-                    </div><div class="footer">
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        /><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div>
-                </section>
-            </div>
-            <div class="card">
-                <div>
-                    <img
-                        class="imagen"
-                        src="src/assets/images/seutils.png"
-                        alt=""
-                    />
-                </div><section class="container_description">
-                    <div class="header">
-                        <h4>titulo</h4><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div><div class="descripcion">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Veniam neque quisquam officiis tempora.
-                            Aliquid quae sed cupiditate earum! Vel provident
-                            animi numquam architecto vitae placeat tempora
-                            voluptatum nesciunt sapiente laudantium!
-                        </p>
-                    </div><div class="footer">
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        /><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div>
-                </section>
-            </div>
-            <div class="card">
-                <div>
-                    <img
-                        class="imagen"
-                        src="src/assets/images/seutils.png"
-                        alt=""
-                    />
-                </div><section class="container_description">
-                    <div class="header">
-                        <h4>titulo</h4><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div><div class="descripcion">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Veniam neque quisquam officiis tempora.
-                            Aliquid quae sed cupiditate earum! Vel provident
-                            animi numquam architecto vitae placeat tempora
-                            voluptatum nesciunt sapiente laudantium!
-                        </p>
-                    </div><div class="footer">
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        /><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div>
-                </section>
-            </div>
         </div>
     </div>
 </section>
@@ -290,6 +176,21 @@
         gap: 3rem;
         justify-items: center;
     }
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            transform: translateX(
+                -10%
+            ); /* Empieza fuera de la pantalla hacia la izquierda */
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0); /* Se mueve a su posición original */
+        }
+    }
+
     .card {
         background: rgba(19, 21, 26, 0.5);
         backdrop-filter: blur(20px) saturate(180%);
@@ -299,6 +200,16 @@
         display: flex;
         flex-direction: column;
         min-height: 300px;
+    }
+
+    .container_proyectos {
+        view-timeline-name: --tarjeta;
+        view-timeline-axis: block;
+
+        animation-timeline: --tarjeta;
+        animation-name: show;
+        animation-range: entry 0% cover 20%;
+        animation-fill-mode: both;
     }
     .imagen {
         width: 100%;
@@ -340,8 +251,31 @@
         .proyectos {
             margin-top: -5%;
         }
+        .container_proyectos {
+            gap: 1rem;
+        }
     }
     @media (max-width: 1024px) {
+        @keyframes show {
+            from {
+                opacity: 0;
+                scale: 50%;
+            }
+
+            to {
+                opacity: 1;
+                scale: 100%;
+            }
+        }
+        .card {
+            view-timeline-name: --tarjeta;
+            view-timeline-axis: block;
+
+            animation-timeline: --tarjeta;
+            animation-name: show;
+            animation-range: entry 20% cover 20%;
+            animation-fill-mode: both;
+        }
         .container_proyectos {
             grid-template-columns: repeat(1, 1fr);
         }

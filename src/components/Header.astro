@@ -1,6 +1,4 @@
 ---
-import astroLogo from "../assets/astro.svg";
-import background from "../assets/background.svg";
 import SideBarButton from "./react_components/SideBarButton";
 ---
 
@@ -28,8 +26,21 @@ import SideBarButton from "./react_components/SideBarButton";
 </header>
 
 <style>
+	/* Animación para el movimiento desde arriba */
+	@keyframes slideDown {
+		0% {
+			transform: translateY(-100%);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
 	.header {
 		position: fixed;
+		top: 0;
 		width: 100%;
 		background: rgba(19, 21, 26, 0.7);
 		backdrop-filter: blur(20px) saturate(180%);
@@ -40,6 +51,7 @@ import SideBarButton from "./react_components/SideBarButton";
 		padding-bottom: 5px;
 		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 		z-index: 2;
+		animation: slideDown 0.8s ease-out;
 	}
 
 	ul {
@@ -86,7 +98,7 @@ import SideBarButton from "./react_components/SideBarButton";
 
 	@media (max-width: 560px) {
 		.header {
-			justify-content:end;
+			justify-content: end;
 			align-items: center;
 		}
 

@@ -1,6 +1,5 @@
 ---
-import {AccordionH, AccordionE} from './react_components/Accordion';
-
+import { AccordionH, AccordionE } from "./react_components/Accordion";
 ---
 
 <section class="sobre" id="sobre_mi">
@@ -18,102 +17,263 @@ import {AccordionH, AccordionE} from './react_components/Accordion';
                     SQL y NoSQL.
                 </p>
             </div>
-            <AccordionH client:media="(max-width: 1280px)"/>
+            <AccordionH client:media="(max-width: 1280px)" />
         </div>
 
         <div class="container_educacion">
-            <AccordionE client:media="(max-width: 1280px)"/>
+            <AccordionE client:media="(max-width: 1280px)" />
         </div>
     </div>
+    <!-- <script src="./scripts/ScrollAnimations.js"></script> -->
+</section>
 
-    <style>
-        .sobre {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* height: 100%; */
-            /* height: 100vh; */
-            /* margin-top: 8px; */
-            /* margin-left: -8px;
-            margin-right: -7px; */
-            background: linear-gradient(
-                180deg,
-                rgb(19, 21, 26) 20.8%,
-                rgb(34, 33, 50) 94.3%
-            );
+<style>
+    .sobre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+            180deg,
+            rgb(19, 21, 26) 20.8%,
+            rgb(34, 33, 50) 94.3%
+        );
+    }
+    .div2 {
+        display: flex;
+        flex-direction: row;
+        width: 75%;
+        margin-top: 5%;
+    }
+
+    .container_sobre_mi {
+        display: grid;
+        width: 55%;
+        /*  opacity: 0;
+        transform: translateX(100%);
+        animation-duration: 1s;
+        animation-fill-mode: forwards; */
+    }
+
+    .sobre_mi {
+        background: rgba(49, 46, 97, 0.5);
+        backdrop-filter: blur(20px) saturate(180%);
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-bottom: 0.8%;
+        margin-bottom: 2.5%;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.05);
+    }
+
+    .sobre_mi::before {
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .no_hidden {
+        display: flex;
+    }
+
+    .h4s {
+        margin-top: -1px;
+        margin-bottom: -10px;
+    }
+
+    .container_educacion {
+        display: grid;
+        width: 45%;
+        /* opacity: 0; 
+        transform: translateX(-10%);
+        animation-duration: 1s;
+        animation-fill-mode: forwards; */
+    }
+
+    @keyframes slideInLeft {
+        0% {
+            transform: translateX(-20%);
+            opacity: 0;
         }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /*     @keyframes slideOutLeft {
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(-10%);
+            opacity: 0;
+        }
+    } */
+
+    @keyframes slideInRight {
+        0% {
+            transform: translateX(20%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /*     @keyframes slideOutRight {
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(10%);
+            opacity: 0;
+        }
+    } */
+
+    /* .container_sobre_mi.visible {
+        animation: slideInLeft 1s forwards;
+    }
+
+    .container_educacion.visible {
+        animation: slideInRight 1s forwards;
+    }
+
+    .container_sobre_mi.h {
+        animation: slideOutLeft 1s forwards;
+    }
+
+    .container_educacion.h {
+        animation: slideOutRight 1s forwards;
+    }
+ */
+    .container_sobre_mi {
+        view-timeline-name: --tarjetaLeft;
+        view-timeline-axis: block;
+
+        animation-timeline: --tarjetaLeft;
+        animation-name: slideInLeft;
+        animation-range: entry 20% cover 45%;
+        animation-fill-mode: both;
+    }
+
+    .container_educacion {
+        view-timeline-name: --tarjetaRight;
+        view-timeline-axis: block;
+
+        animation-timeline: --tarjetaRight;
+        animation-name: slideInRight;
+        animation-range: entry 20% cover 45%;
+        animation-fill-mode: both;
+    }
+
+    @media (max-width: 1280px) {
         .div2 {
-            display: flex;
-            flex-direction: row;
-            width: 75%;
-            /* padding: 5%; */
-            margin-top: 5%;
-            /* margin-top: 22px;  */
+            flex-direction: column;
+            padding: 5%;
+        }
+
+        @keyframes show {
+            from {
+                opacity: 0;
+                scale: 50%;
+            }
+
+            to {
+                opacity: 1;
+                scale: 100%;
+            }
         }
 
         .container_sobre_mi {
-            display: grid;
-            width: 55%;
+            view-timeline-name: --tarjetaLeft;
+            view-timeline-axis: block;
+
+            animation-timeline: --tarjetaLeft;
+            animation-name: show;
+            animation-range: entry 20% cover 30%;
+            animation-fill-mode: both;
         }
 
-        .sobre_mi {
-            /* grid-template-columns: auto max-content; */
-            /* background: rgba(32, 28, 44, 0.5); */
-            background: rgba(49, 46, 97, 0.5);
-            backdrop-filter: blur(20px) saturate(180%);
-            padding-left: 4%;
-            padding-right: 4%;
-            padding-bottom: 0.8%;
-            margin-bottom: 2.5%;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.05);
+        /* @keyframes slideInLeftPlus {
+            0% {
+                transform: translateX(-20%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
-        .sobre_mi::before {
-            
+        @keyframes slideOutLeftPlus {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-20%);
+                opacity: 0;
+            }
         }
 
-        .hidden {
-            display: none;
+        @keyframes slideInRightPlus {
+            0% {
+                transform: translateX(20%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
-        .no_hidden {
-            display: flex;
-        }
+        @keyframes slideOutRightPlus {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(20%);
+                opacity: 0;
+            }
+        } */
 
-        .h4s {
-            margin-top: -1px;
-            margin-bottom: -10px;
-        }
-
+        .container_sobre_mi,
         .container_educacion {
-            display: grid;
-            width: 45%;
+            width: 100%;
+            /* animation-duration: 1s;
+            opacity: 1;
+            transform: translateX(0); */
         }
 
-        @media (max-width: 1280px) {
-            .div2 {
-                display: flex;
-                flex-direction: column;
-                width: 75%;
-                padding: 5%;
-                /* margin-top: 22px;  */
-            }
-            .container_sobre_mi,
-            .container_educacion {
-                width: 100%;
-            }
-            .footer {
-                position: relative;
-                width: 100%;
-            }
-            .educacion {
-                background: rgba(49, 46, 97, 0.5);
-                margin-left: 0%;
-                margin-top: 5%;
-                /* height: 26vh; */
-            }
+        /* .container_sobre_mi.visible {
+            animation-name: slideInLeftPlus 1s forwards;
+        }
+
+        .container_educacion.visible {
+            animation-name: slideInRightPlus 1s forwards;
+        }
+
+        .container_sobre_mi.h {
+            animation: slideOutLeftPlus 1s forwards;
+        }
+
+        .container_educacion.h {
+            animation: slideOutRightPlus 1s forwards;
+        } */
+
+        .footer {
+            position: relative;
+            width: 100%;
+        }
+        .educacion {
+            background: rgba(49, 46, 97, 0.5);
+            margin-left: 0%;
+            margin-top: 5%;
         }
     }
-    </style>
-</section>
+</style>

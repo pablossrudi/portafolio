@@ -3,7 +3,7 @@ import './SideBar.css';
 
 const SideBar = () => {
     return (
-        <header class="headerSideBar">
+        <header className="headerSideBar">
             <nav>
                 <ul>
                     <li>
