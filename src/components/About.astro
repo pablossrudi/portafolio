@@ -91,11 +91,11 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
     }
 
     @keyframes slideInLeft {
-        0% {
+        from {
             transform: translateX(-20%);
             opacity: 0;
         }
-        100% {
+        to {
             transform: translateX(0);
             opacity: 1;
         }
@@ -113,11 +113,11 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
     } */
 
     @keyframes slideInRight {
-        0% {
+        from {
             transform: translateX(20%);
             opacity: 0;
         }
-        100% {
+        to {
             transform: translateX(0);
             opacity: 1;
         }
@@ -198,6 +198,11 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
             animation-fill-mode: both;
         }
 
+        .container_educacion {
+            animation-name: show;
+            animation-fill-mode: both;
+        }
+
         /* @keyframes slideInLeftPlus {
             0% {
                 transform: translateX(-20%);
@@ -274,6 +279,11 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
             background: rgba(49, 46, 97, 0.5);
             margin-left: 0%;
             margin-top: 5%;
+        }
+    }
+    @media (max-width: 560px) {
+        .div2 {
+            width: 85%;
         }
     }
 </style>
