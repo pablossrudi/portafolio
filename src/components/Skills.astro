@@ -271,6 +271,7 @@
     .container_frontend {
         display: flex;
         width: 40%;
+        
     }
     .card_frontend {
         padding-left: 4%;
@@ -281,16 +282,21 @@
         margin-bottom: 1.8%;
         border-radius: 8px;
         box-shadow: 0px 3px 10px rgba(175, 174, 174, 0.05);
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
     }
 
     .card_frontend {
         view-timeline-name: --tarjetaLeft;
         view-timeline-axis: block;
-
         animation-timeline: --tarjetaLeft;
         animation-name: showLeft;
         animation-range: entry 20% cover 45%;
         animation-fill-mode: both;
+    }
+
+    .card_frontend:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.5);
     }
 
     .container_cards_r {
@@ -316,10 +322,12 @@
         margin-bottom: 1%;
         border-radius: 8px;
         box-shadow: 0px 3px 10px rgba(175, 174, 174, 0.05);
+        /* transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1); */
     }
     .oscuro_card {
         background: rgba(19, 21, 26, 0.5);
         backdrop-filter: blur(20px) saturate(180%);
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
     }
     .color_card {
         background: linear-gradient(
@@ -328,6 +336,7 @@
             rgba(49, 46, 97, 0.5) 94.3%
         );
         backdrop-filter: blur(20px) saturate(180%);
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
     }
 
     .oscuro_claro_card {
@@ -337,10 +346,21 @@
             rgba(49, 46, 97, 0.5) 94.3%
         );
         backdrop-filter: blur(20px) saturate(180%);
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
     }
     .claro_card {
         background: rgba(49, 46, 97, 0.5);
         backdrop-filter: blur(20px) saturate(180%);
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+    }
+
+    .claro_card:hover,
+    .oscuro_claro_card:hover,
+    .color_card:hover,
+    .oscuro_card:hover
+     {
+        transform: scale(1.01);
+        box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.5);
     }
 
     .container_icons {
