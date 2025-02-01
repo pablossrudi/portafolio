@@ -45,9 +45,7 @@ const AccordionH = () => {
                     necesidades del equipo
                 </p>
                 <p>
-                    Me considero adaptable, con la capacidad de aprender
-                    nuevas tecnologías y ajustar mis enfoques según las
-                    necesidades del proyecto. En situaciones de presión,
+                    En situaciones de presión,
                     mantengo una gestión del estrés eficiente, priorizando
                     tareas y cumpliendo plazos sin sacrificar calidad.
                     También valoro la retroalimentación constructiva y

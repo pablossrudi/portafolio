@@ -6,36 +6,40 @@
                 <div>
                     <img
                         class="imagen"
-                        src="src/assets/images/seutils.png"
-                        alt=""
+                        src="src/assets/images/wosubb.jpg"
+                        alt="wosubb"
                     />
                 </div><section class="container_description">
                     <div class="header">
-                        <h4>titulo</h4><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
+                        <h4>WOSSUBB</h4>
                     </div><div class="descripcion">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Veniam neque quisquam officiis tempora.
-                            Aliquid quae sed cupiditate earum! Vel provident
-                            animi numquam architecto vitae placeat tempora
-                            voluptatum nesciunt sapiente laudantium!
+                            App diseñada para que la comunidad de la Universidad
+                            del Bío-Bío pueda crear alertas de seguridad en el
+                            perímetro de la institución y mostrarlas en el mapa.
                         </p>
                     </div><div class="footer">
                         <img
                             width="30"
                             height="30"
                             src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
+                            alt="react-native"
                         /><img
                             width="30"
                             height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
+                            src="https://img.icons8.com/ios-glyphs/30/ffffff/expo.png"
+                            alt="expo"
+                        />
+                        <img
+                            width="30"
+                            height="30"
+                            src="https://img.icons8.com/ios/50/ffffff/express-js.png"
+                            alt="express-js"
+                        />
+                        <img
+                            width="30"
+                            height="30"
+                            src="https://img.icons8.com/ios/50/ffffff/mysql-logo.png" alt="mysql-logo"
                         />
                     </div>
                 </section>
@@ -49,19 +53,16 @@
                     />
                 </div><section class="container_description">
                     <div class="header">
-                        <h4>titulo</h4><img
+                        <h4>SeutilsUBB</h4><img
                             width="30"
                             height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
+                            src="https://img.icons8.com/ios-filled/50/ffffff/figma--v1.png"
+                            alt="figma--v1"
                         />
                     </div><div class="descripcion">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Veniam neque quisquam officiis tempora.
-                            Aliquid quae sed cupiditate earum! Vel provident
-                            animi numquam architecto vitae placeat tempora
-                            voluptatum nesciunt sapiente laudantium!
+                            Pagina web para gestionar trabajos grupales de
+                            alumnos en ramos de la Universidad del Bío-Bío.
                         </p>
                     </div><div class="footer">
                         <img
@@ -72,8 +73,20 @@
                         /><img
                             width="30"
                             height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
+                            src="https://img.icons8.com/material-rounded/24/ffffff/tailwind_css.png"
+                            alt="tailwind_css"
+                        />
+                        <img
+                            width="30"
+                            height="30"
+                            src="https://img.icons8.com/ios/50/ffffff/express-js.png"
+                            alt="express-js"
+                        />
+                        <img
+                            width="30"
+                            height="30"
+                            src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/ffffff/external-mongodb-a-cross-platform-document-oriented-database-program-logo-bold-tal-revivo.png"
+                            alt="mongo-db"
                         />
                     </div>
                 </section>
@@ -173,21 +186,19 @@
     .container_proyectos {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
+        gap: 2.5rem;
         justify-items: center;
     }
 
     @keyframes show {
         from {
             opacity: 0;
-            transform: translateX(
-                -10%
-            ); /* Empieza fuera de la pantalla hacia la izquierda */
+            scale: 50%;
         }
 
         to {
             opacity: 1;
-            transform: translateX(0); /* Se mueve a su posición original */
+            scale: 100%;
         }
     }
 
@@ -202,7 +213,7 @@
         min-height: 300px;
     }
 
-    .container_proyectos {
+    .card {
         view-timeline-name: --tarjeta;
         view-timeline-axis: block;
 
@@ -216,7 +227,7 @@
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         background-color: rgba(19, 21, 26, 0.4);
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 3.5 / 2;
         object-fit: scale-down;
     }
 
@@ -247,16 +258,14 @@
     @media (max-width: 1280px) {
         .container_proyectos {
             grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
         }
         .proyectos {
             margin-top: -5%;
         }
-        .container_proyectos {
-            gap: 1rem;
-        }
     }
     @media (max-width: 1024px) {
-        @keyframes show {
+        /* @keyframes show {
             from {
                 opacity: 0;
                 scale: 50%;
@@ -275,7 +284,7 @@
             animation-name: show;
             animation-range: entry 20% cover 20%;
             animation-fill-mode: both;
-        }
+        } */
         .container_proyectos {
             grid-template-columns: repeat(1, 1fr);
         }
