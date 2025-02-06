@@ -94,24 +94,26 @@ const AccordionE = () => {
             </div>
 
             <div className={`no_hidde ${hidden ? "hidden" : ""}`}>
-            <ul>
+            <ul className="ul">
                         <li>
-                            <div>
+                            <div className="container_items">
+                                <img className="i" src="src/assets/images/ubb.png" width="21" height="28" alt="ubb logo" />
                                 <h4>Universidad del Bío-Bío, Concepción</h4>
                             </div>
-                            <p>Ingeniería Civil en Informática | 2017 - 2022</p>
+                            <p className="p">Ingeniería Civil en Informática | 2017 - 2022</p>
                         </li>
                         <li>
-                            <div>
+                            <div className="container_items">
+                            <img className="i" src="src/assets/images/ECAMPb_alone1.png" width="22" height="29" alt="ubb logo" />
                                 <h4>E-Camp Edutecno</h4>
                             </div>
-                            <p>Full Stack Java Trainee | 2024 - 2025</p>
+                            <p className="p">Full Stack Java Trainee | 2024 - 2025</p>
                         </li>
                     </ul>
 
                     <div className="footerA">
                         <div className="container-titulos">
-                            <a className="descargar-titulos" href="" target="_blank"
+                            <a className="descargar-titulos" href="Titulos y certificados" target="_blank"
                                 ><img
                                     className="icon_descargar"
                                     width="25"

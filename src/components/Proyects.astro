@@ -1,170 +1,82 @@
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+/* console.log(projects); */
+const projectsOrdenados = projects.sort((a, b) => a.data.orden - b.data.orden);
+---
+
 <section class="proyectos" id="proyectos">
     <div class="div3">
         <h3><strong>Proyectos</strong></h3>
         <div class="container_proyectos">
-            <div class="card">
-                <div>
-                    <img
-                        class="imagen"
-                        src="src/assets/images/wosubb.jpg"
-                        alt="wosubb"
-                    />
-                </div><section class="container_description">
-                    <div class="header">
-                        <h4>WOSSUBB</h4>
-                    </div><div class="descripcion">
-                        <p>
-                            App diseñada para que la comunidad de la Universidad
-                            del Bío-Bío pueda crear alertas de seguridad en el
-                            perímetro de la institución y mostrarlas en el mapa.
-                        </p>
-                    </div><div class="footer">
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="react-native"
-                        /><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/ios-glyphs/30/ffffff/expo.png"
-                            alt="expo"
-                        />
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/ios/50/ffffff/express-js.png"
-                            alt="express-js"
-                        />
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/ios/50/ffffff/mysql-logo.png" alt="mysql-logo"
-                        />
-                    </div>
-                </section>
-            </div>
-            <div class="card">
-                <div>
-                    <img
-                        class="imagen"
-                        src="src/assets/images/seutils.png"
-                        alt=""
-                    />
-                </div><section class="container_description">
-                    <div class="header">
-                        <h4>SeutilsUBB</h4><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/ios-filled/50/ffffff/figma--v1.png"
-                            alt="figma--v1"
-                        />
-                    </div><div class="descripcion">
-                        <p>
-                            Pagina web para gestionar trabajos grupales de
-                            alumnos en ramos de la Universidad del Bío-Bío.
-                        </p>
-                    </div><div class="footer">
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        /><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/material-rounded/24/ffffff/tailwind_css.png"
-                            alt="tailwind_css"
-                        />
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/ios/50/ffffff/express-js.png"
-                            alt="express-js"
-                        />
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/ffffff/external-mongodb-a-cross-platform-document-oriented-database-program-logo-bold-tal-revivo.png"
-                            alt="mongo-db"
-                        />
-                    </div>
-                </section>
-            </div>
-            <div class="card">
-                <div>
-                    <img
-                        class="imagen"
-                        src="src/assets/images/seutils.png"
-                        alt=""
-                    />
-                </div><section class="container_description">
-                    <div class="header">
-                        <h4>titulo</h4><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div><div class="descripcion">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Veniam neque quisquam officiis tempora.
-                            Aliquid quae sed
-                        </p>
-                    </div><div class="footer">
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        /><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div>
-                </section>
-            </div>
-            <div class="card">
-                <div>
-                    <img
-                        class="imagen"
-                        src="src/assets/images/seutils.png"
-                        alt=""
-                    />
-                </div><section class="container_description">
-                    <div class="header">
-                        <h4>titulo</h4><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div><div class="descripcion">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Veniam neque quisquam officiis tempora.
-                            Aliquid quae sed cupiditate earum! Vel provident
-                            animi numquam architecto vitae placeat tempora
-                            voluptatum nesciunt sapiente laudantium!
-                        </p>
-                    </div><div class="footer">
-                        <img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        /><img
-                            width="30"
-                            height="30"
-                            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png"
-                            alt="external-react-social-media-tanah-basah-glyph-tanah-basah"
-                        />
-                    </div>
-                </section>
-            </div>
+            {
+                projectsOrdenados.map((projects) => {
+                    const { slug, data } = projects;
+                    const { titulo, enlaces, descripcion, img, tecnologias } =
+                        data;
+
+                    return (
+                        <article class="card">
+                            <div>
+                                <a href={`/proyectos/${slug}`}>
+                                    <img
+                                        class="imagen"
+                                        src={img}
+                                        alt="wosubb"
+                                    />
+                                </a>
+                            </div>
+                            <section class="container_description">
+                                <div class="header">
+                                    <h4>{titulo}</h4>
+                                    {enlaces.texto?.map(
+                                        (enlace: string, index: number) => {
+                                            const icono = enlaces.iconos
+                                                ? enlaces.iconos[index]
+                                                : null;
+                                            return icono ? (
+                                                <a
+                                                    href={enlace}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    <img
+                                                        width="30"
+                                                        height="30"
+                                                        src={icono}
+                                                        alt={enlace}
+                                                    />
+                                                </a>
+                                            ) : null;
+                                        },
+                                    )}
+                                </div>
+                                <div class="descripcion">
+                                    <p>{descripcion}</p>
+                                </div>
+                                <div class="footer">
+                                    {tecnologias.texto?.map(
+                                        (nombre: string, index: number) => {
+                                            const icono = tecnologias.iconos
+                                                ? tecnologias.iconos[index]
+                                                : null;
+                                            return icono ? (
+                                                <img
+                                                    width="30"
+                                                    height="30"
+                                                    src={icono}
+                                                    alt={nombre}
+                                                />
+                                            ) : null;
+                                        },
+                                    )}
+                                </div>
+                            </section>
+                        </article>
+                    );
+                })
+            }
         </div>
     </div>
 </section>

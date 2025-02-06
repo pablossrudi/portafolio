@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    const projects = await getCollection("projects");
+    return projects.map((project) => ({
+        params: {
+            id: project.slug
+        },
+        props: {project}
+    }));
+}
+
+const { project } = Astro.props;
+const { data } = project;
+const { titulo, enlaces, descripcion, img, tecnologias } = data;
+
+const { Content } = await render(project);
+---
+
+<Layout title={`${titulo} - proyectos`}>
+    
+    <img src={`../${img}`} alt={titulo} />
+
+    <main>
+        <h1>{titulo}</h1>
+        <div>
+            <Content />
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .imagen {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background-color: rgba(19, 21, 26, 0.4);
+        aspect-ratio: 3.5 / 2;
+        object-fit: scale-down;
+    }
+</style>

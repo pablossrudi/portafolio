@@ -116,6 +116,22 @@
     z-index: 1;
 }
 
+.container_items {
+    display: flex;
+    align-items: center;
+}
+.i {
+    margin-right: 15px;
+}
+
+.p{
+    margin-top: 1%;
+}
+
+.ul {
+    margin-left: -1%;
+}
+
 @media (max-width: 1280px) {
     .container_top {
         display: flex;
