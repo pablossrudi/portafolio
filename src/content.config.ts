@@ -1,6 +1,6 @@
 import { defineCollection, z } from "astro:content";
 
-const proyectos = defineCollection({
+const proyectos = defineCollection({   
     schema: z.object({
         titulo: z.string(),
         enlaces: z.object({

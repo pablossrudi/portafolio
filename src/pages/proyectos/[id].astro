@@ -1,43 +1,85 @@
 ---
 import { getCollection, render } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
 export async function getStaticPaths() {
     const projects = await getCollection("projects");
-    return projects.map((project) => ({
+    return projects.map((project:any) => ({
         params: {
-            id: project.slug
+            id: project.id
         },
         props: {project}
     }));
 }
 
 const { project } = Astro.props;
-const { data } = project;
+const { data, id } = project;
 const { titulo, enlaces, descripcion, img, tecnologias } = data;
 
 const { Content } = await render(project);
 ---
 
-<Layout title={`${titulo} - proyectos`}>
+<ProjectLayout title={`${titulo} - proyectos`}>
     
-    <img src={`../${img}`} alt={titulo} />
+    <div class="container">
+        <aside class="containerImagen">
+            <img transition:name={`img-${id}`} class="imagen" src={`../${img}`} alt={titulo} />
+        </aside>
+    
+        <main class="containerContent">
+            <h1>{titulo}</h1>
+            <div >
+                <Content />
+            </div>
+        </main>
 
-    <main>
-        <h1>{titulo}</h1>
-        <div>
-            <Content />
-        </div>
-    </main>
-</Layout>
+        
+
+    </div>
+</ProjectLayout>
 
 <style>
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        margin-right: 1rem; 
+        border-radius: 8px;
+        background-color: rgba(19, 21, 26, 0.4);
+    }
+    .containerImagen {
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+        align-items: center; 
+        margin-left: -50px; 
+    }
     .imagen {
         width: 100%;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         background-color: rgba(19, 21, 26, 0.4);
-        aspect-ratio: 3.5 / 2;
-        object-fit: scale-down;
+        /* aspect-ratio: 1 / 1; */
+        /* object-fit: scale-down; */ 
+    }
+    .containerContent {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        margin-left: 15px;
+        /* gap: 0.5rem; */
+    }
+    @media (max-width: 1024px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .containerImagen {
+            width: 60%;
+            margin-left: 0;
+        }
+        .containerContent {
+            width: 100%;
+        }
     }
 </style>

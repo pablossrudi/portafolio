@@ -6,7 +6,7 @@ enlaces:
     iconos: 
         - https://img.icons8.com/glyph-neue/64/ffffff/github.png
 descripcion: Aplicación web con autenticación mediante JWT, capaz de manejar datos de alumnos y consultar que materias tienen asignadas.
-img: src/assets/images/calificacion.png
+img: src/assets/images/sis_calificaciones.png
 tecnologias:
     texto: 
         - Thymeleaf
