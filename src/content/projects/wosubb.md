@@ -5,6 +5,18 @@ enlaces:
     iconos:
 descripcion: App diseñada para que la comunidad de la Universidad del Bío-Bío pueda crear alertas de seguridad en el perímetro de la institución y mostrarlas en el mapa.
 img: src/assets/images/wosubb1.png
+imgs: 
+    - /src/assets/images/wosubb/wosubb.jpg
+    - /src/assets/images/wosubb/wosubb_crear_alerta_1.png
+    - /src/assets/images/wosubb/wosubb_crear_alerta_2.png
+    - /src/assets/images/wosubb/wosubb_crear_alerta_3.png
+    - /src/assets/images/wosubb/wosubb_menu_alerta.png
+    - /src/assets/images/wosubb/wosubb_alerta_prueba.png
+    - /src/assets/images/wosubb/wosubb_reporte.png
+    - /src/assets/images/wosubb/wosubb_reporte_fecha.png
+    - /src/assets/images/wosubb/wosubb_reporte_mapa.png
+    - /src/assets/images/wosubb/wosubb_reporte_alerta.png
+    - /src/assets/images/wosubb/wosubb_reporte_alerta_comentarios.png
 tecnologias:
     texto: 
         - React Native
@@ -38,6 +50,6 @@ La aplicación cuenta con un **historial de registro**, accesible solo por usuar
 
 También existe un apartado de **comentarios para que la comunidad** pueda interactuar en cada alerta, junto con las acciones de ***"visto"*** y ***"me gusta"*** como interacción adicional. 
 
-Se integró la herramienta google maps para mostrar las diferentes areas de la institución junto con las alertas realizadas por la comunidad.
+Se integró la herramienta **google maps** para mostrar las diferentes areas de la institución junto con las **alertas** realizadas por la comunidad.
 
 

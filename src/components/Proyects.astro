@@ -12,16 +12,16 @@ const projectsOrdenados = projects.sort((a:any, b:any) => a.data.orden - b.data.
         <div class="container_proyectos">
             {
                 projectsOrdenados.map((projects:any) => {
-                    const { id, data } = projects;
+                    const { data, slug } = projects;
                     const { titulo, enlaces, descripcion, img, tecnologias } =
                         data;
 
                     return (
                         <article class="card">
                             <div>
-                                <a href={`/proyectos/${id}`}>
+                                <a href={`/proyectos/${slug}`}>
                                     <img
-                                        transition:name={`img-${id}`}
+                                        transition:name={`img-${slug}`}
                                         class="imagen"
                                         src={img}
                                         alt="wosubb"
@@ -133,12 +133,13 @@ const projectsOrdenados = projects.sort((a:any, b:any) => a.data.orden - b.data.
 
         animation-timeline: --tarjeta;
         animation-name: show;
-        animation-range: entry 0% cover 20%;
+        animation-range: entry 40% cover 45%;
+        /* animation-range: entry 0% cover 20%; */
         animation-fill-mode: both;
     }
 
     .card:hover {
-        transform: scale(1.01);
+        /* transform: scale(1.01); */
         box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.5);
     }
 
@@ -149,6 +150,13 @@ const projectsOrdenados = projects.sort((a:any, b:any) => a.data.orden - b.data.
         background-color: rgba(19, 21, 26, 0.4);
         aspect-ratio: 3.5 / 2;
         object-fit: scale-down;
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+    }
+
+    .imagen:hover {
+        transform: scale(0.98);
+        box-shadow: 0px 0px 10px rgba(19, 21, 26, 1);
+        /* box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.2); */
     }
 
     .container_description {

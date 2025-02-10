@@ -1,24 +1,35 @@
 <section class="container_footer">
-    <hr>
+    <hr />
     <div class="footer">
         <div class="icon">
-            <img
-            width="30" height="30"
-            src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png"
-            alt="github"
-        />
+            <a href="https://linkedin.com/in/pablo-ulloa-lizama-86b301271" target="_blank">
+                <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                    alt="linkedin"
+                />
+            </a>
         </div>
         <div class="icon">
-            <img
-            width="30" height="30"
-            src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin"
-        />
+            <a href="https://github.com/pablossrudi" target="_blank">
+                <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png"
+                    alt="github"
+                />
+            </a>
         </div>
         <div class="icon">
-            <img
-            width="30" height="30"
-            src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="new-post"
-        />
+            <a href="" target="_blank">
+                <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png"
+                    alt="new-post"
+                />
+            </a>
         </div>
     </div>
 </section>
@@ -38,11 +49,19 @@
     .footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3rem; 
+        gap: 3rem;
         justify-items: center;
     }
     .icon {
         margin-top: 15px;
-        /* margin-right: 20% */
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain; /* Asegura que los iconos se ajusten sin distorsionarse */
     }
 </style>
