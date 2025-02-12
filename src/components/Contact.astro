@@ -2,35 +2,39 @@
     <div class="div5">
         <div class="container_form">
             <h3><strong>Contáctame</strong></h3>
-            <form action="" class="form">
+            <form method="POST" id="form" class="form">
+                <input type="hidden" name="access_key" value="68533d21-edd2-4835-9886-940775804f14">
                 <div class="coolinput">
-                    <label for="nombre" class="text">Nombre:</label>
+                    <label for="name" class="text">Nombre:</label>
                     <input
                         type="text"
                         placeholder="Escribe tu nombre..."
-                        name="nombre"
+                        name="name"
                         class="input"
+                        required
                     />
                 </div>
                 <div class="coolinput">
-                    <label for="correo" class="text">Correo:</label>
+                    <label for="email" class="text">Correo:</label>
                     <input
-                        type="text"
+                        type="email"
                         placeholder="Escribe tu correo..."
-                        name="correo"
+                        name="email"
                         class="input"
+                        required
                     />
                 </div>
                 <div class="coolinput">
-                    <label for="mensaje" class="text">Mensaje:</label>
+                    <label for="message" class="text">Mensaje:</label>
                     <textarea
                         placeholder="Escribe tu mensaje..."
-                        name="mensaje"
-                        class="text_area"></textarea>
+                        name="message"
+                        class="text_area"
+                        required></textarea>
                 </div>
                 <div class="footer">
                     <div class="container-bn">
-                        <a class="descargar-bn" href="" target="_blank"
+                        <button class="descargar-bn" type="submit"
                             ><img
                                 class="icon_enviar"
                                 width="25"
@@ -39,9 +43,12 @@
                                 alt="mail"
                             /><span class="enviar-content">Enviar</span></a
                         >
+                        </button>
                     </div>
                 </div>
+                <div id="result" class="resultado"></div>
             </form>
+            <script src="./scripts/Form.js"></script> 
         </div>
         <div class="container_imagen">
             <img class="gif" src="src/assets/images/yo_nuevo.gif" alt="" />
@@ -162,6 +169,25 @@
 
     .coolinput input[type="text"].input:focus {
         outline: none;
+    }
+    .coolinput input[type="email"].input {
+        padding: 11px 10px;
+        font-size: 0.75rem;
+        border: 2px #fff solid;
+        color: #fff;
+        border-radius: 5px;
+        background: rgba(49, 46, 97, 0.5);
+    }
+
+    .coolinput input[type="email"].input:focus {
+        outline: none;
+    }
+
+    .resultado {
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
     }
     /* .text {
         color: #D9D9D9;

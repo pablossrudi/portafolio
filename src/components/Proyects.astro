@@ -3,7 +3,9 @@ import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
 /* console.log(projects); */
-const projectsOrdenados = projects.sort((a:any, b:any) => a.data.orden - b.data.orden);
+const projectsOrdenados = projects.sort(
+    (a: any, b: any) => a.data.orden - b.data.orden,
+);
 ---
 
 <section class="proyectos" id="proyectos">
@@ -11,7 +13,7 @@ const projectsOrdenados = projects.sort((a:any, b:any) => a.data.orden - b.data.
         <h3><strong>Proyectos</strong></h3>
         <div class="container_proyectos">
             {
-                projectsOrdenados.map((projects:any) => {
+                projectsOrdenados.map((projects: any) => {
                     const { data, slug } = projects;
                     const { titulo, enlaces, descripcion, img, tecnologias } =
                         data;
@@ -63,12 +65,18 @@ const projectsOrdenados = projects.sort((a:any, b:any) => a.data.orden - b.data.
                                                 ? tecnologias.iconos[index]
                                                 : null;
                                             return icono ? (
-                                                <img
-                                                    width="30"
-                                                    height="30"
-                                                    src={icono}
-                                                    alt={nombre}
-                                                />
+                                                <div
+                                                    id={nombre}
+                                                    class="social-btn flex-center"
+                                                >
+                                                    <img
+                                                        width="24"
+                                                        height="24"
+                                                        src={icono}
+                                                        alt={nombre}
+                                                    />
+                                                    <span>{nombre}</span>
+                                                </div>
                                             ) : null;
                                         },
                                     )}
@@ -183,6 +191,51 @@ const projectsOrdenados = projects.sort((a:any, b:any) => a.data.orden - b.data.
         margin-right: 5%;
         margin-top: auto;
     }
+
+    .flex-center {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* margin-left: -10px; */
+    }
+
+    .social-btn {
+        cursor: pointer;
+        /* 
+        width: 50px; */
+        height: 30px;
+        font-family: "Titillium Web", sans-serif;
+        color: #d9d9d9;
+        
+        /* padding-left: 3px;
+        padding-right: 3px; */
+        /* margin: 5px; */
+        /* transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1); */
+        transition: 1s;
+    }
+
+    .social-btn span {
+        width: 0px;
+        overflow: hidden;
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+        /* transition: 0.3s; */
+        text-align: center;
+        /* margin-left: 1px; */
+    }
+
+    .social-btn:hover {
+       /*  padding-left: 10px; */
+/*         background-color: rgba(34, 33, 50, 0.7); 
+        border-radius: 5rem;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1); */
+        /* padding-right: 3px; */
+    }
+
+    .social-btn:hover span {
+        padding: 2px;
+        width: 80px;
+    }
+
     @media (max-width: 1280px) {
         .container_proyectos {
             grid-template-columns: repeat(2, 1fr);

@@ -21,8 +21,22 @@
                     alt="github"
                 />
             </a>
+
+            <a
+                class="btn_linkedin"
+                href="https://linkedin.com/in/pablo-ulloa-lizama-86b301271"
+                target="_blank"
+            >
+                <img
+                    class="icon_linkedin"
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                    alt="linkedin"
+                />
+            </a>
             <!-- <button class="descargar"> -->
-            <a class="descargar" href="/assets/Curriculum.pdf" download
+            <a class="descargar" href="src/assets/curriculum.pdf" target="_blank"
                 ><img
                     class="icon_descargar"
                     width="20"
@@ -37,9 +51,9 @@
     <img class="gif" src="src/assets/images/yo_nuevo.gif" alt="" />
 
     <div class="container-scroll-btn">
-        <div class="scroll-text">
+        <a href="#sobre_mi" class="scroll-text">
             <p>Scroll para explorar</p>
-        </div>
+        </a>
         <a href="#sobre_mi" class="scroll-btn">
             <div class="scroll"></div>
         </a>
@@ -80,7 +94,17 @@
         }
     }
 
-    .container-scroll-btn > * {
+    .container-scroll-btn {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* width: 100px; */
+        bottom: 50px;
+        left: 46.2%;
+    }
+
+    .container-scroll-btn {
         view-timeline-name: --scrollbtn;
         view-timeline-axis: block;
         animation-timeline: --scrollbtn;
@@ -89,9 +113,9 @@
     }
 
     .scroll-btn {
-        position: absolute;
-        bottom: 50px;
-        left: 49.2%;
+        /* position: absolute; */
+        /* bottom: 50px;
+        left: 49.2%; */
         /* left: 47.5%; */
         width: 35px;
         height: 55px;
@@ -126,15 +150,17 @@
         animation: scroll_4013 2s linear infinite;
         transform: translateY(40%);
     }
+    
 
     .scroll-text {
-        position: absolute;
-        bottom: 100px;
-        left: 46.2%;
+        /* position: absolute; */
+        /* bottom: 100px;
+        left: 46.2%; */
         color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
     }
 
     /* .scroll-text {
@@ -152,17 +178,17 @@
     }
 
     p:hover {
-        color: rgba(99, 88, 238, 1);
+        color: rgba(255, 255, 255, 1);
     }
 
     .scroll-btn:hover {
-        outline: 2px solid rgba(99, 88, 238, 1);
-        box-shadow: 0px 0px 10px rgba(99, 88, 238, 1);
+        outline: 2px solid rgb(255, 255, 255);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
     }
 
     .scroll-btn:hover .scroll {
-        background-color: rgba(99, 88, 238, 1);
-        box-shadow: 0px 0px 10px rgba(99, 88, 238, 1);
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
     }
 
     @keyframes scroll_4013 {
@@ -217,7 +243,7 @@
         height: 3.5rem;
         width: 147px;
         padding: 0 2rem;
-        margin-left: 20px;
+        margin-left: 1rem;
         border-radius: 0.5rem;
         background: #3d3a4e;
         border: none;
@@ -287,6 +313,7 @@
         );
         transition: all 0.475s;
     }
+
     .icon_descargar {
         margin-right: 20px;
         margin-left: -10px;
@@ -295,6 +322,47 @@
     .icon_github {
         z-index: 1;
     }
+    .btn_linkedin {
+        margin-top: 3.5rem;
+        margin-left: 1rem;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        height: 3.5rem;
+        width: 0;
+        padding: 0 2rem;
+        border-radius: 0.5rem;
+        background: #3d3a4e;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    .btn_linkedin:hover::before {
+        transform: scaleX(1);
+    }
+    .btn_linkedin::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 100% 50%;
+        width: 100%;
+        height: inherit;
+        border-radius: inherit;
+        background: linear-gradient(
+            82.3deg,
+            rgba(150, 93, 233, 1) 10.8%,
+            rgba(99, 88, 238, 1) 94.3%
+        );
+        transition: all 0.475s;
+    }
+    .icon_linkedin {
+        z-index: 1;
+    }
+
     .container-titulos {
         display: flex;
         margin-left: 12px;
@@ -314,10 +382,13 @@
     .gif:hover {
         transform: scale(1.005);
     }
-    @media (max-width: 1030px) {
-        .scroll-text {
+    @media (max-width: 880px) {
+        /* .container-scroll-btn {
             bottom: 110px;
             left: 45.5%;
+        } */
+        .container-scroll-btn {
+            left: 7.2%;
         }
     }
 
@@ -330,19 +401,32 @@
             margin-top: -60px;
         }
 
-        .scroll-text {
-            left: 7.2%;
+        .descargar {
+            width: 0;
         }
 
-        .scroll-btn {
+        .descargar-content {
+            display: none;
+        }
+
+        .icon_descargar {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        
+
+        /* .scroll-btn {
             left: 15%;
         }
 
         .scroll-btn:hover:after {
             content: "";
-        }
+        } */
         /* .scroll-text {
             left: 40.9%;
         } */
     }
+
+
 </style>

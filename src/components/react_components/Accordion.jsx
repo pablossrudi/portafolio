@@ -113,7 +113,7 @@ const AccordionE = () => {
 
                     <div className="footerA">
                         <div className="container-titulos">
-                            <a className="descargar-titulos" href="Titulos y certificados" target="_blank"
+                            <a className="descargar-titulos" href="https://drive.google.com/drive/folders/1UGWuCBijjR7VwF3v9Cm1jRGAncjxOkWt?usp=sharing" target="_blank"
                                 ><img
                                     className="icon_descargar"
                                     width="25"

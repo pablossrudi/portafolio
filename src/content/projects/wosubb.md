@@ -48,7 +48,7 @@ La aplicación cuenta con un **historial de registro**, accesible solo por usuar
 
 <!-- <img align="center" src="../src/assets/images/wosubb_reporte.png" width="330"> -->
 
-También existe un apartado de **comentarios para que la comunidad** pueda interactuar en cada alerta, junto con las acciones de ***"visto"*** y ***"me gusta"*** como interacción adicional. 
+También existe un apartado de **comentarios para que la comunidad** pueda interactuar en cada alerta, junto con las acciones de ***"recibido"*** y ***"me gusta"*** como interacción adicional. 
 
 Se integró la herramienta **google maps** para mostrar las diferentes areas de la institución junto con las **alertas** realizadas por la comunidad.
 
