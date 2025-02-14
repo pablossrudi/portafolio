@@ -9,8 +9,10 @@ import Footer from "../components/Footer.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="description" content=`Portafolio de Pablo Ulloa - Realizado con ${Astro.generator} `/>
+		<link rel="icon" type="image/svg+xml" href="src/assets/icon.png" />
+		<meta name="title" content="Pablo Ulloa Lizama" />
+		<meta name="description" content=`Este es el Portafolio de Pablo Ulloa Lizama, desarrollador Full Stack, donde podrás encontrar sus proyectos, contactarte directamente con él y mucho más! - Realizado con ${Astro.generator} `/>
+		<meta name="keywords" content="pablo ulloa,Pablo Ulloa,Pablo Ulloa Lizama,pablo ulloa lizama,desarrollador,fullstack,full stack,desarrollador fullstack,desarrollador full stack" />
 		<title>Pablo Ulloa Lizama - Portafolio</title>
 		<ClientRouter />
 	</head>
@@ -43,12 +45,20 @@ import Footer from "../components/Footer.astro";
             0.65rem 0.65rem;
     }
 	h1 {
-		color: white;
+		background: linear-gradient(
+            82.3deg,
+            rgb(255, 255, 255) 10.8%,
+            rgb(197, 196, 196) 94.3%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
 		font-size: 64px;
 	}
 	h2 {
 		color: white;
-		font-size: 48px;
+		font-size: 45px;
+		margin-bottom: 47px;
 	}
 	h3, h4 {
 		color: white;

@@ -33,7 +33,23 @@ const projectsOrdenados = projects.sort(
                             <section class="container_description">
                                 <div class="header">
                                     <h4>{titulo}</h4>
-                                    {enlaces.texto?.map(
+                                    <a href={`/proyectos/${slug}`} class="a">
+                                        <div
+                                            id={slug}
+                                            class="social-btn flex-center"
+                                        >
+                                            <p class="pIcon">Ver más</p>
+
+                                            <img
+                                                width="30"
+                                                height="30"
+                                                src="https://img.icons8.com/windows/32/ffffff/more.png"
+                                                alt="more"
+                                                class="more"
+                                            />
+                                        </div>
+                                    </a>
+                                    {/* {enlaces.texto?.map(
                                         (enlace: string, index: number) => {
                                             const icono = enlaces.iconos
                                                 ? enlaces.iconos[index]
@@ -53,7 +69,7 @@ const projectsOrdenados = projects.sort(
                                                 </a>
                                             ) : null;
                                         },
-                                    )}
+                                    )} */}
                                 </div>
                                 <div class="descripcion">
                                     <p>{descripcion}</p>
@@ -111,16 +127,22 @@ const projectsOrdenados = projects.sort(
         justify-items: center;
     }
 
-    @keyframes show {
+    @keyframes showLeft {
         from {
             opacity: 0;
-            scale: 50%;
+            transform: translateX(
+                -20%
+            ); /* Empieza fuera de la pantalla hacia la izquierda */
         }
 
         to {
             opacity: 1;
-            scale: 100%;
+            transform: translateX(0); /* Se mueve a su posición original */
         }
+    }
+
+    .a {
+        text-decoration: none;
     }
 
     .card {
@@ -140,7 +162,7 @@ const projectsOrdenados = projects.sort(
         view-timeline-axis: block;
 
         animation-timeline: --tarjeta;
-        animation-name: show;
+        animation-name: showLeft;
         animation-range: entry 40% cover 45%;
         /* animation-range: entry 0% cover 20%; */
         animation-fill-mode: both;
@@ -204,9 +226,9 @@ const projectsOrdenados = projects.sort(
         /* 
         width: 50px; */
         height: 30px;
-        font-family: "Titillium Web", sans-serif;
+        /* font-family: "Titillium Web", sans-serif; */
         color: #d9d9d9;
-        
+
         /* padding-left: 3px;
         padding-right: 3px; */
         /* margin: 5px; */
@@ -219,16 +241,40 @@ const projectsOrdenados = projects.sort(
         overflow: hidden;
         transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
         /* transition: 0.3s; */
+
         text-align: center;
         /* margin-left: 1px; */
     }
 
+    .social-btn .pIcon {
+        width: 0px;
+        overflow: hidden;
+        transition: 0.3s;
+        text-align: center;
+        color: #d9d9d9;
+        font-size: 0;
+        /* margin-left: 5px; */
+    }
+
+    .social-btn:hover .pIcon {
+        /* transition: 0.3s; */
+        padding: 2px;
+        width: 80px;
+        font-size: 0.9rem;
+        /* margin-left: 5px; */
+    }
+
     .social-btn:hover {
-       /*  padding-left: 10px; */
-/*         background-color: rgba(34, 33, 50, 0.7); 
+        /*  padding-left: 10px; */
+        /*         background-color: rgba(34, 33, 50, 0.7); 
         border-radius: 5rem;
         box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1); */
         /* padding-right: 3px; */
+    }
+
+    .social-btn:hover .more {
+        transform: rotate(90deg);
+        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
     }
 
     .social-btn:hover span {
@@ -246,7 +292,7 @@ const projectsOrdenados = projects.sort(
         }
     }
     @media (max-width: 1024px) {
-        /* @keyframes show {
+        @keyframes show {
             from {
                 opacity: 0;
                 scale: 50%;
@@ -263,9 +309,10 @@ const projectsOrdenados = projects.sort(
 
             animation-timeline: --tarjeta;
             animation-name: show;
-            animation-range: entry 20% cover 20%;
+            animation-range: entry 40% cover 45%;
             animation-fill-mode: both;
-        } */
+        }
+
         .container_proyectos {
             grid-template-columns: repeat(1, 1fr);
         }

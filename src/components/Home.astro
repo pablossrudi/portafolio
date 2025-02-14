@@ -4,7 +4,7 @@
             <h1><strong>Pablo Ulloa Lizama</strong></h1>
         </div>
         <div class="prof">
-            <h2><b>Full Stack Developer</b></h2>
+            <h2 class="subtitulo"><b>Desarrollador Full Stack</b></h2>
         </div>
 
         <div class="btns_home">
@@ -36,7 +36,10 @@
                 />
             </a>
             <!-- <button class="descargar"> -->
-            <a class="descargar" href="src/assets/curriculum.pdf" target="_blank"
+            <a
+                class="descargar"
+                href="src/assets/curriculum.pdf"
+                target="_blank"
                 ><img
                     class="icon_descargar"
                     width="20"
@@ -70,6 +73,16 @@
             rgb(19, 21, 26) 59.8%,
             rgb(49, 46, 97) 90.3%
         );
+    }
+    .subtitulo {
+        background: linear-gradient(
+            82.3deg,
+            rgba(99, 88, 238, 1) 10.8%,
+            rgba(150, 93, 233, 1) 94.3%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 
     @keyframes slideUp {
@@ -150,7 +163,6 @@
         animation: scroll_4013 2s linear infinite;
         transform: translateY(40%);
     }
-    
 
     .scroll-text {
         /* position: absolute; */
@@ -226,6 +238,7 @@
 
     .prof {
         margin-top: -50px;
+        margin-bottom: 5px;
     }
 
     .btns_home {
@@ -414,8 +427,6 @@
             margin-left: 0;
         }
 
-        
-
         /* .scroll-btn {
             left: 15%;
         }
@@ -427,6 +438,4 @@
             left: 40.9%;
         } */
     }
-
-
 </style>

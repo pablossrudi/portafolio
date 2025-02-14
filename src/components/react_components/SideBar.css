@@ -6,7 +6,7 @@
     display: none;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 630px) {
     .buttonMenu {
         display: flex;
         height: 45px;
