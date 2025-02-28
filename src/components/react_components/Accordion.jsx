@@ -121,7 +121,7 @@ const AccordionE = () => {
                                     src="https://img.icons8.com/ios-filled/50/ffffff/google-drive--v2.png"
                                     alt="google-drive--v2"
                                 /><span className="descargar-content"
-                                    >Titulos y certificados</span
+                                    >Títulos y certificados</span
                                 ></a
                             >
                         </div>

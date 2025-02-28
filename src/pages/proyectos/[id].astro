@@ -22,72 +22,90 @@ const images = imgs ? imgs.map((img: string) => img) : [];
 ---
 
 <ProjectLayout title={`${titulo} - proyectos`}>
-    <div class="container">
-        <aside class="containerImagen">
-            <img
-                transition:name={`img-${slug}`}
-                class="imagen"
-                src={`../${img}`}
-                alt={titulo}
-            />
-            <div class="social-links">
-                {tecnologias.texto?.map(
-                    (nombre: string, index: number) => {
-                        const icono = tecnologias.iconos
-                            ? tecnologias.iconos[index]
-                            : null;
-                        return icono ? (
-                            <div id={nombre} class="social-btn flex-center">
-                                <img
-                                    width="24"
-                                    height="24"
-                                    src={icono}
-                                    alt={nombre}
-                                /><span>{nombre}</span>
-                            </div>
-                        ) : null;
-                    },
-                )}
-            </div>
-        </aside>
-
-        <main class="containerContent">
-            <div class="containerTitle">
-                <h1>{titulo}</h1>
-                <div class="anexos">
-                    {enlaces.texto?.map(
-                        (nombre: string, index: number) => {
-                            const icono = enlaces.iconos
-                                ? enlaces.iconos[index]
-                                : null;
-                            return icono ? (
-                                <div id={nombre} class="social-btn flex-center">
-                                    <img
-                                        width="24"
-                                        height="24"
-                                        src={icono}
-                                        alt={nombre}
-                                    /><span>{nombre}</span>
-                                </div>
-                            ) : null;
-                        },
-                    )}
+    <div>
+        <div class="container">
+            <aside class="containerImagen">
+                <img
+                    transition:name={`img-${slug}`}
+                    class="imagen"
+                    src={`../${img}`}
+                    alt={titulo}
+                />
+                <div class="social-links">
+                    {
+                        tecnologias.texto?.map(
+                            (nombre: string, index: number) => {
+                                const icono = tecnologias.iconos
+                                    ? tecnologias.iconos[index]
+                                    : null;
+                                return icono ? (
+                                    <div
+                                        id={nombre}
+                                        class="social-btn flex-center"
+                                    >
+                                        <>
+                                            <img
+                                                width="24"
+                                                height="24"
+                                                src={icono}
+                                                alt={nombre}
+                                            />
+                                            <span>{nombre}</span>
+                                        </>
+                                    </div>
+                                ) : null;
+                            },
+                        )
+                    }
                 </div>
-            </div>
-            <div class="content-wrapper">
-                <Content />
-                
-            </div>
-            
+            </aside>
+
+            <main class="containerContent">
+                <div class="containerTitle">
+                    <h1>{titulo}</h1>
+                    <div class="anexos">
+                        {
+                            enlaces.texto?.map(
+                                (nombre: string, index: number) => {
+                                    const icono = enlaces.iconos
+                                        ? enlaces.iconos[index]
+                                        : null;
+                                    return icono ? (
+                                        <div
+                                            id={nombre}
+                                            class="social-btn flex-center"
+                                        >
+                                            <>
+                                                <img
+                                                    width="24"
+                                                    height="24"
+                                                    src={icono}
+                                                    alt={nombre}
+                                                />
+                                                <span>{nombre}</span>
+                                            </>
+                                        </div>
+                                    ) : null;
+                                },
+                            )
+                        }
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <Content />
+                </div>
+            </main>
+        </div>
+        <div class="carrousel">
             {
                 images && images.length > 0 ? (
                     <>
-                        <h2>Algunas imágenes del proyecto</h2>
+                        <h1>Algunas imágenes del proyecto</h1>
                         <Carousel images={images} client:load />
                     </>
                 ) : null
             }
-        </main>
+        </div>
     </div>
 
     <style>
@@ -99,7 +117,7 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             border-radius: 8px;
             background-color: rgba(19, 21, 26, 0.4);
         }
-        .containerTitle{
+        .containerTitle {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -121,18 +139,18 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             width: 600px;
             margin-left: 65px;
         }
-        
+
         .content-wrapper {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
         }
-        
+
         .content-wrapper :global(p) {
             text-align: justify;
             margin-bottom: 1rem;
         }
-        
+
         .social-links,
         .flex-center {
             display: flex;
@@ -141,7 +159,7 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             margin-left: -10px;
         }
 
-        .anexos{
+        .anexos {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -178,6 +196,15 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             width: 80px;
         }
 
+        .carrousel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 6%;
+        }
 
         @media (max-width: 800px) {
             .container {
@@ -195,9 +222,14 @@ const images = imgs ? imgs.map((img: string) => img) : [];
                 width: 95%;
                 margin-left: 15px;
             }
+
+            .carrousel {
+                margin-left: 3%;
+                margin-right: 3%;
+            }
         }
         @media (max-width: 500px) {
-            .containerTitle{
+            .containerTitle {
                 flex-direction: column;
                 justify-content: flex-start;
             }
