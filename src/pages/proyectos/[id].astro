@@ -52,7 +52,6 @@ const images = imgs ? imgs.map((img: string) => img) : [];
         </aside>
 
         <main class="containerContent">
-            
             <div class="containerTitle">
                 <h1>{titulo}</h1>
                 <div class="anexos">
@@ -75,15 +74,19 @@ const images = imgs ? imgs.map((img: string) => img) : [];
                     )}
                 </div>
             </div>
-            <div>
+            <div class="content-wrapper">
                 <Content />
-                {
-                    images && images.length > 0 ? (
-                        <h2>Algunas imagenes del proyecto</h2>
-                        <Carousel images={images} client:load />
-                    ) : null
-                }
+                
             </div>
+            
+            {
+                images && images.length > 0 ? (
+                    <>
+                        <h2>Algunas imágenes del proyecto</h2>
+                        <Carousel images={images} client:load />
+                    </>
+                ) : null
+            }
         </main>
     </div>
 
@@ -105,23 +108,29 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             display: flex;
             width: 400px;
             flex-direction: column;
-            /* align-items: center; */
             margin-left: -50px;
+            float: left; /* Allow content to wrap around */
+            margin-right: 20px; /* Add space between image and content */
         }
         .imagen {
             width: 100%;
-            
-            /* border-radius: 8px;
-        background-color: rgba(19, 21, 26, 0.4); */
-            /* aspect-ratio: 1 / 1; */
-            /* object-fit: scale-down; */
         }
         .containerContent {
             display: flex;
             flex-direction: column;
             width: 600px;
             margin-left: 65px;
-            /* gap: 0.5rem; */
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        
+        .content-wrapper :global(p) {
+            text-align: justify;
+            margin-bottom: 1rem;
         }
         
         .social-links,
@@ -162,7 +171,6 @@ const images = imgs ? imgs.map((img: string) => img) : [];
 
         .social-btn:hover {
             width: 150px;
-            /* border-radius: 5px; */
         }
 
         .social-btn:hover span {
@@ -179,6 +187,8 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             .containerImagen {
                 width: 95%;
                 margin-left: 0;
+                float: none;
+                margin-right: 0;
             }
 
             .containerContent {
