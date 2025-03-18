@@ -6,19 +6,19 @@ import SideBarButton from "./react_components/SideBarButton";
 	<nav>
 		<ul>
 			<li>
-				<a href="#home">Home</a>
+				<a class="a" href="#home">Home</a>
 			</li>
 			<li>
-				<a href="#sobre_mi">Sobre Mí</a>
+				<a class="a" href="#sobre_mi">Sobre Mí</a>
 			</li>
 			<li>
-				<a href="#proyectos">Proyectos</a>
+				<a class="a" href="#proyectos">Proyectos</a>
 			</li>
 			<li>
-				<a href="#habilidades">Habilidades</a>
+				<a class="a" href="#habilidades">Habilidades</a>
 			</li>
 			<li>
-				<a href="#contactar">Contactar</a>
+				<a class="a" href="#contactar">Contactar</a>
 			</li>
 		</ul>
 	</nav>
@@ -64,7 +64,7 @@ import SideBarButton from "./react_components/SideBarButton";
 		padding: 0 20px;
 	}
 
-	a {
+	.a {
 		position: relative;
 		font-size: 1.1rem;
 		color: white;
@@ -72,10 +72,10 @@ import SideBarButton from "./react_components/SideBarButton";
 		text-decoration: none;
 		transition: 0.475s;
 	}
-	a:hover {
+	.a:hover {
 		color: rgba(99, 88, 238, 1);
 	}
-	a::after {
+	.a::after {
 		content: "";
 		position: absolute;
 		left: 0;
@@ -86,7 +86,7 @@ import SideBarButton from "./react_components/SideBarButton";
 		transition: 0.475s;
 	}
 
-	a:hover::after {
+	.a:hover::after {
 		width: 100%;
 		background: rgba(99, 88, 238, 1);
 	}

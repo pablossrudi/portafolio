@@ -8,13 +8,29 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
             <div class="sobre_mi">
                 <h3>Sobre mí</h3>
 
-                <h4 class="h4s">Chile</h4>
+                <h4 class="h4s">
+                    <img
+                        class="worldwide-location"
+                        width="20"
+                        height="20"
+                        src="https://img.icons8.com/glyph-neue/64/FFFFFF/marker--v1.png"
+                        alt="marker--v1"
+                    />
+                    Concepción, Chile <!-- <img
+                        class="chile_icon"
+                        width="20"
+                        height="20"
+                        src="https://img.icons8.com/external-others-iconmarket/64/ffffff/external-chile-flags-others-iconmarket.png"
+                        alt="external-chile-flags-others-iconmarket"
+                    /> -->
+                </h4>
+
                 <p>
-                    ¡Hola! soy un egresado de Ingeniería Civil en Informática encantado por
-                    el desarrollo full stack, dispuesto a aprender todo sobre
-                    el desarrollo de software. Ademas cuento con conocimientos
-                    de front-end, back-end, manejo de datos y en bases de datos
-                    SQL y NoSQL.
+                    ¡Hola! soy un egresado de Ingeniería Civil en Informática
+                    encantado por el desarrollo full stack, dispuesto a aprender
+                    todo sobre el desarrollo de software. Ademas cuento con
+                    conocimientos de front-end, back-end, manejo de datos y en
+                    bases de datos SQL y NoSQL.
                 </p>
             </div>
             <AccordionH client:media="(max-width: 1280px)" />
@@ -79,9 +95,24 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
         display: flex;
     }
 
+    .subtitulo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .h4s {
-        margin-top: -1px;
-        margin-bottom: -10px;
+        margin-top: -6px;
+        margin-bottom: -5px;
+    }
+
+    .worldwide-location {
+        margin-bottom: -3px;
+    }
+
+    .chile_icon {
+        margin-bottom: -4px;
+        margin-left: 2px;
     }
 
     .container_educacion {

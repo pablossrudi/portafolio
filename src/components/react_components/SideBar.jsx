@@ -7,19 +7,19 @@ const SideBar = () => {
             <nav>
                 <ul>
                     <li>
-                        <a href="#home">Home</a>
+                        <a className="a" href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#sobre_mi">Sobre Mí</a>
+                        <a className="a" href="#sobre_mi">Sobre Mí</a>
                     </li>
                     <li>
-                        <a href="#proyectos">Proyectos</a>
+                        <a className="a" href="#proyectos">Proyectos</a>
                     </li>
                     <li>
-                        <a href="#habilidades">Habilidades</a>
+                        <a className="a" href="#habilidades">Habilidades</a>
                     </li>
                     <li>
-                        <a href="#contactar">Contactar</a>
+                        <a className="a" href="#contactar">Contactar</a>
                     </li>
                 </ul>
             </nav>

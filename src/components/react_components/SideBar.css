@@ -38,7 +38,7 @@
         list-style: none;
 	}
 
-	a {
+	.a {
 		position: relative;
 		font-size: 700;
 		color: white;
@@ -46,10 +46,10 @@
 		text-decoration: none;
 		transition: 0.475s;
 	}
-	a:hover {
+	.a:hover {
 		color: rgba(99, 88, 238, 1);
 	}
-	a::after {
+	.a::after {
 		content: "";
 		position: absolute;
 		left: 0;
@@ -60,7 +60,7 @@
 		transition: 0.475s;
 	}
 
-	a:hover::after {
+	.a:hover::after {
 		width: 100%;
 		background: rgba(99, 88, 238, 1);
 	}

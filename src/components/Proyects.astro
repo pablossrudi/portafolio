@@ -33,22 +33,27 @@ const projectsOrdenados = projects.sort(
                             <section class="container_description">
                                 <div class="header">
                                     <h4>{titulo}</h4>
-                                    <a href={`/proyectos/${slug}`} class="a">
-                                        <div
-                                            id={slug}
-                                            class="social-btn flex-center"
+
+                                    <div
+                                        id={slug}
+                                        class="social-btn flex-center"
+                                    >
+                                        <a
+                                            href={`/proyectos/${slug}`}
+                                            class="vermas"
                                         >
                                             <p class="pIcon">Ver más</p>
+                                        </a>
 
-                                            <img
-                                                width="30"
-                                                height="30"
-                                                src="https://img.icons8.com/windows/32/ffffff/more.png"
-                                                alt="more"
-                                                class="more"
-                                            />
-                                        </div>
-                                    </a>
+                                        <img
+                                            width="30"
+                                            height="30"
+                                            src="https://img.icons8.com/windows/32/ffffff/more.png"
+                                            alt="more"
+                                            class="more"
+                                        />
+                                    </div>
+
                                     {/* {enlaces.texto?.map(
                                         (enlace: string, index: number) => {
                                             const icono = enlaces.iconos
@@ -141,7 +146,7 @@ const projectsOrdenados = projects.sort(
         }
     }
 
-    .a {
+    .vermas {
         text-decoration: none;
     }
 
