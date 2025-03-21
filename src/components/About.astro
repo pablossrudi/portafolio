@@ -16,13 +16,7 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
                         src="https://img.icons8.com/glyph-neue/64/FFFFFF/marker--v1.png"
                         alt="marker--v1"
                     />
-                    Concepción, Chile <!-- <img
-                        class="chile_icon"
-                        width="20"
-                        height="20"
-                        src="https://img.icons8.com/external-others-iconmarket/64/ffffff/external-chile-flags-others-iconmarket.png"
-                        alt="external-chile-flags-others-iconmarket"
-                    /> -->
+                    Concepción, Chile
                 </h4>
 
                 <p>
@@ -64,10 +58,6 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
     .container_sobre_mi {
         display: grid;
         width: 55%;
-        /*  opacity: 0;
-        transform: translateX(100%);
-        animation-duration: 1s;
-        animation-fill-mode: forwards; */
     }
 
     .sobre_mi {
@@ -83,7 +73,6 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
     }
 
     .sobre_mi:hover {
-        /* transform: scale(1.01); */
         box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.5);
     }
 
@@ -118,10 +107,6 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
     .container_educacion {
         display: grid;
         width: 45%;
-        /* opacity: 0; 
-        transform: translateX(-10%);
-        animation-duration: 1s;
-        animation-fill-mode: forwards; */
     }
 
     @keyframes slideInLeft {
@@ -135,17 +120,6 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
         }
     }
 
-    /*     @keyframes slideOutLeft {
-        0% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        100% {
-            transform: translateX(-10%);
-            opacity: 0;
-        }
-    } */
-
     @keyframes slideInRight {
         from {
             transform: translateX(20%);
@@ -157,33 +131,6 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
         }
     }
 
-    /*     @keyframes slideOutRight {
-        0% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        100% {
-            transform: translateX(10%);
-            opacity: 0;
-        }
-    } */
-
-    /* .container_sobre_mi.visible {
-        animation: slideInLeft 1s forwards;
-    }
-
-    .container_educacion.visible {
-        animation: slideInRight 1s forwards;
-    }
-
-    .container_sobre_mi.h {
-        animation: slideOutLeft 1s forwards;
-    }
-
-    .container_educacion.h {
-        animation: slideOutRight 1s forwards;
-    }
- */
     .container_sobre_mi {
         view-timeline-name: --tarjetaLeft;
         view-timeline-axis: block;
@@ -237,73 +184,10 @@ import { AccordionH, AccordionE } from "./react_components/Accordion";
             animation-fill-mode: both;
         }
 
-        /* @keyframes slideInLeftPlus {
-            0% {
-                transform: translateX(-20%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideOutLeftPlus {
-            0% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(-20%);
-                opacity: 0;
-            }
-        }
-
-        @keyframes slideInRightPlus {
-            0% {
-                transform: translateX(20%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideOutRightPlus {
-            0% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(20%);
-                opacity: 0;
-            }
-        } */
-
         .container_sobre_mi,
         .container_educacion {
             width: 100%;
-            /* animation-duration: 1s;
-            opacity: 1;
-            transform: translateX(0); */
         }
-
-        /* .container_sobre_mi.visible {
-            animation-name: slideInLeftPlus 1s forwards;
-        }
-
-        .container_educacion.visible {
-            animation-name: slideInRightPlus 1s forwards;
-        }
-
-        .container_sobre_mi.h {
-            animation: slideOutLeftPlus 1s forwards;
-        }
-
-        .container_educacion.h {
-            animation: slideOutRightPlus 1s forwards;
-        } */
 
         .footer {
             position: relative;
