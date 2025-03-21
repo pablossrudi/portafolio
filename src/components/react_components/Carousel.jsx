@@ -18,22 +18,22 @@ const Carrusel = ({ images }) => {
 
     // Set initial count
     updateVisibleCount();
-    
+
     // Add resize listener
     window.addEventListener('resize', updateVisibleCount);
-    
+
     // Cleanup
     return () => window.removeEventListener('resize', updateVisibleCount);
   }, []);
 
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       (prevIndex + 1 >= images.length) ? 0 : prevIndex + 1
     );
   };
 
   const prevImage = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       (prevIndex - 1 < 0) ? Math.max(0, images.length - visibleCount) : prevIndex - 1
     );
   };
@@ -65,7 +65,7 @@ const Carrusel = ({ images }) => {
       <button className="prev" onClick={prevImage}>
         &#10094;
       </button>
-      
+
       <div className="carousel-container">
         {getVisibleImages().map((image, idx) => (
           <div key={idx} className="carousel-item">
@@ -78,11 +78,11 @@ const Carrusel = ({ images }) => {
           </div>
         ))}
       </div>
-      
+
       <button className="next" onClick={nextImage}>
         &#10095;
       </button>
-      
+
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -98,7 +98,7 @@ const Carrusel = ({ images }) => {
               &#10095;
             </button>
             <button className="close" onClick={closeModal}>
-              X
+            <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/ffffff/multiply.png" alt="multiply"/>
             </button>
           </div>
         </div>

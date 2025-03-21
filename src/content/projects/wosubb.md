@@ -24,10 +24,10 @@ tecnologias:
         - Express
         - MySQL
     iconos:
-        - https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/50/ffffff/external-react-social-media-tanah-basah-glyph-tanah-basah.png
-        - https://img.icons8.com/ios-glyphs/30/ffffff/expo.png
-        - https://img.icons8.com/ios/50/ffffff/express-js.png
-        - https://img.icons8.com/ios/50/ffffff/mysql-logo.png
+        - external-react-social-media-tanah-basah-glyph-tanah-basah.png
+        - expo.png
+        - express-js.png
+        - mysql-logo.png
 orden: 1
 ---
 

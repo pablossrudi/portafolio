@@ -35,6 +35,7 @@ const images = imgs ? imgs.map((img: string) => img) : [];
                     {
                         tecnologias.texto?.map(
                             (nombre: string, index: number) => {
+                                
                                 const icono = tecnologias.iconos
                                     ? tecnologias.iconos[index]
                                     : null;
@@ -47,7 +48,7 @@ const images = imgs ? imgs.map((img: string) => img) : [];
                                             <img
                                                 width="24"
                                                 height="24"
-                                                src={icono}
+                                                src={`../src/assets/icons/${icono}`}
                                                 alt={nombre}
                                             />
                                             <span>{nombre}</span>

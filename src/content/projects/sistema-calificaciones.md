@@ -14,9 +14,9 @@ tecnologias:
         - Spring Boot
         - MySQL
     iconos:
-        - src/assets/icons8-thymeleaf-48.png
-        - https://img.icons8.com/ios/50/ffffff/bootstrap.png
-        - src/assets/icons8-spring-boot-48.png
-        - https://img.icons8.com/ios/50/ffffff/mysql-logo.png
+        - icons8-thymeleaf-48.png
+        - bootstrap.png
+        - icons8-spring-boot-48.png
+        - mysql-logo.png
 orden: 3
 ---

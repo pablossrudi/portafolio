@@ -30,7 +30,7 @@
 }
 
 .image:hover {
-  transform: scale(1.05);
+  transform: scale(0.98);
 }
 
 button {
@@ -89,14 +89,14 @@ button:hover {
 }
 
 .modal-image {
-  max-width: 90%;
+  max-width: 80%;
   max-height: 90%;
 }
 
 .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1px;
+  right: 26px;
   background: rgba(0, 0, 0, 0.8);
   color: white;
   border: none;
@@ -129,6 +129,10 @@ button:hover {
     max-width: 100%;
     margin-bottom: 10px;
   }
+
+  .modal-image {
+    max-width: 75%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -141,4 +145,5 @@ button:hover {
     max-width: 100%;
     margin-bottom: 10px;
   }
+  
 }

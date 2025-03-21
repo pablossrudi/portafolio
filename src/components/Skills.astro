@@ -113,6 +113,15 @@
                             <br />
                             <span>Java</span>
                         </div>
+                        <div class="icons">
+                            <img
+                                class="icon"
+                                src="https://img.icons8.com/color/48/c-sharp-logo-2.png"
+                                alt="c-sharp-logo-2"
+                            />
+                            <br />
+                            <span>C#</span>
+                        </div>
                     </div>
                 </div>
                 <div class="card_r oscuro_claro_card">
@@ -139,13 +148,22 @@
                         <div class="icons">
                             <img
                                 class="icon"
+                                src="https://cdn.hashnode.com/res/hashnode/image/upload/v1705941451858/3d68e792-e18a-4b5c-9590-4e4b4d45486d.png"
+                                alt="dotnet"
+                            />
+                            <br />
+                            <span>.NET</span>
+                        </div>
+                        <div class="icons">
+                            <img
+                                class="icon"
                                 src="https://img.icons8.com/color/48/mysql-logo.png"
                                 alt="mysql-logo"
                             />
                             <br />
                             <span>MySQL</span>
                         </div>
-                        <div class="icons">
+                        <!-- <div class="icons">
                             <img
                                 class="icon"
                                 src="https://img.icons8.com/color/48/postgreesql.png"
@@ -153,7 +171,7 @@
                             />
                             <br />
                             <span>PostgreeSQL</span>
-                        </div>
+                        </div> -->
                         <div class="icons">
                             <img
                                 class="icon"
@@ -271,7 +289,6 @@
     .container_frontend {
         display: flex;
         width: 40%;
-        
     }
     .card_frontend {
         padding-left: 4%;
@@ -357,8 +374,7 @@
     .claro_card:hover,
     .oscuro_claro_card:hover,
     .color_card:hover,
-    .oscuro_card:hover
-     {
+    .oscuro_card:hover {
         /* transform: scale(1.01); */
         box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.5);
     }
@@ -397,6 +413,9 @@
         height: 60px;
     }
     @media (max-width: 1600px) {
+        .container_icons_r {
+            gap: 2rem;
+        }
         .icon {
             width: 40px;
             height: 40px;
