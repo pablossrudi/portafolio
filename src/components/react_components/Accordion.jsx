@@ -97,14 +97,14 @@ const AccordionE = () => {
             <ul className="ul">
                         <li>
                             <div className="container_items">
-                                <img className="i" src="src/assets/images/ubb.png" width="21" height="28" alt="ubb logo" />
+                                <img className="i" src="src/assets/images/ubb.webp" width="21" height="28" alt="ubb logo" />
                                 <h4>Universidad del Bío-Bío, Concepción</h4>
                             </div>
                             <p className="p">Ingeniería Civil en Informática | 2017 - 2022</p>
                         </li>
                         <li>
                             <div className="container_items">
-                            <img className="i" src="src/assets/images/ECAMPb_alone1.png" width="22" height="29" alt="ubb logo" />
+                            <img className="i" src="src/assets/images/ECAMPb_alone1.webp" width="22" height="29" alt="ubb logo" />
                                 <h4>E-Camp Edutecno</h4>
                             </div>
                             <p className="p">Full Stack Java Trainee | 2024 - 2025</p>

@@ -4,19 +4,19 @@ enlaces:
     texto:
     iconos:
 descripcion: App diseñada para que la comunidad de la Universidad del Bío-Bío pueda crear alertas de seguridad en el perímetro de la institución y mostrarlas en el mapa.
-img: src/assets/images/wosubb1.png
+img: src/assets/images/wosubb1.webp
 imgs: 
-    - /src/assets/images/wosubb/wosubb.jpg
-    - /src/assets/images/wosubb/wosubb_crear_alerta_1.png
-    - /src/assets/images/wosubb/wosubb_crear_alerta_2.png
-    - /src/assets/images/wosubb/wosubb_crear_alerta_3.png
-    - /src/assets/images/wosubb/wosubb_menu_alerta.png
-    - /src/assets/images/wosubb/wosubb_alerta_prueba.png
-    - /src/assets/images/wosubb/wosubb_reporte.png
-    - /src/assets/images/wosubb/wosubb_reporte_fecha.png
-    - /src/assets/images/wosubb/wosubb_reporte_mapa.png
-    - /src/assets/images/wosubb/wosubb_reporte_alerta.png
-    - /src/assets/images/wosubb/wosubb_reporte_alerta_comentarios.png
+    - /src/assets/images/wosubb/wosubb.webp
+    - /src/assets/images/wosubb/wosubb_crear_alerta_1.webp
+    - /src/assets/images/wosubb/wosubb_crear_alerta_2.webp
+    - /src/assets/images/wosubb/wosubb_crear_alerta_3.webp
+    - /src/assets/images/wosubb/wosubb_menu_alerta.webp
+    - /src/assets/images/wosubb/wosubb_alerta_prueba.webp
+    - /src/assets/images/wosubb/wosubb_reporte.webp
+    - /src/assets/images/wosubb/wosubb_reporte_fecha.webp
+    - /src/assets/images/wosubb/wosubb_reporte_mapa.webp
+    - /src/assets/images/wosubb/wosubb_reporte_alerta.webp
+    - /src/assets/images/wosubb/wosubb_reporte_alerta_comentarios.webp
 tecnologias:
     texto: 
         - React Native

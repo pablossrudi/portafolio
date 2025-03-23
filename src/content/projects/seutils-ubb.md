@@ -6,7 +6,7 @@ enlaces:
     iconos: 
         - https://img.icons8.com/ios-filled/50/ffffff/figma--v1.png
 descripcion: Aplicación web para gestionar trabajos grupales de alumnos en ramos de la Universidad del Bío-Bío.
-img: src/assets/images/seutilsubb.png
+img: src/assets/images/seutilsubb.webp
 tecnologias:
     texto:
         - React
