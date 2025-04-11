@@ -7,6 +7,20 @@ enlaces:
         - https://img.icons8.com/ios-filled/50/ffffff/figma--v1.png
 descripcion: Aplicación web para gestionar trabajos grupales de alumnos en ramos de la Universidad del Bío-Bío.
 img: src/assets/images/seutilsubb.webp
+imgs:
+    - /src/assets/images/seutils/seutils-login.webp
+    - /src/assets/images/seutils/seutils-registrar-alumnos.webp
+    - /src/assets/images/seutils/seutils-registrar-alumnos-2.webp
+    - /src/assets/images/seutils/seutils-ver-alumnos.webp
+    - /src/assets/images/seutils/seutils-grupos.webp
+    - /src/assets/images/seutils/seutils-requisitos.webp
+    - /src/assets/images/seutils/seutils-fechas.webp
+    - /src/assets/images/seutils/seutils-reuniones.webp
+    - /src/assets/images/seutils/seutils-generar-minuta.webp
+    - /src/assets/images/seutils/seutils-evaluaciones.webp
+    - /src/assets/images/seutils/seutils-unirse-grupo.webp
+    - /src/assets/images/seutils/seutils-requisitos-alumno.webp
+    - /src/assets/images/seutils/seutils-reuniones-alumno.webp
 tecnologias:
     texto:
         - React
