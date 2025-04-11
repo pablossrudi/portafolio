@@ -10,7 +10,6 @@ img: src/assets/images/seutilsubb.webp
 imgs:
     - /src/assets/images/seutils/seutils-login.webp
     - /src/assets/images/seutils/seutils-registrar-alumnos.webp
-    - /src/assets/images/seutils/seutils-registrar-alumnos-2.webp
     - /src/assets/images/seutils/seutils-ver-alumnos.webp
     - /src/assets/images/seutils/seutils-grupos.webp
     - /src/assets/images/seutils/seutils-requisitos.webp
