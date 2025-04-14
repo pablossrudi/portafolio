@@ -33,7 +33,15 @@ tecnologias:
         - external-mongodb-a-cross-platform-document-oriented-database-program-logo-bold-tal-revivo.png
 orden: 2
 ---
-Aplicación web para gestionar trabajos grupales de alumnos en ramos de la Universidad del Bío-Bío.
+Esta **aplicación web** está diseñada para **facilitar la gestión de tareas y proyectos grupales en contextos académicos**, específicamente orientada a **profesores y estudiantes** de la Universidad del Bío-Bío. Su desarrollo se enmarca como **apoyo a la docencia** en las asignaturas de **Ingeniería de Software** y **Gestión de Proyectos de Software**, con el objetivo de **mejorar la experiencia del usuario y la accesibilidad mediante una interfaz intuitiva y funcional**.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+La plataforma ofrece **funcionalidades diferenciadas** según el **rol del usuario, ya sea profesor o estudiante**:
+
+- **Estudiantes:**
+Los alumnos pueden **unirse fácilmente a grupos de trabajo** mediante una **visualización en tiempo real del estado de los grupos**, diferenciando entre aquellos disponibles y aquellos que han alcanzado su capacidad máxima. Además, pueden consultar el **estado de los requisitos**, tanto individuales como grupales, revisar **observaciones realizadas por el profesor**, y acceder al **historial de reuniones**, incluyendo **asistencia y notas registradas**.
+
+- **Profesores:**
+Los docentes cuentan con **herramientas de gestión** que les permiten **subir alumnos al sistema**, **crear grupos de trabajo** con sus **respectivos temas**, definir **fechas importantes**,** organizar reuniones**, y revisar el **cumplimiento de requisitos** por parte de los estudiantes. Todas las **acciones realizadas quedan registradas en el sistema** para asegurar un seguimiento adecuado.
+
+En **futuras versiones** se proyecta **ampliar el sistema**, incorporando nuevas **funcionalidades que beneficien tanto a estudiantes como a profesores**, fortaleciendo así el **proceso de enseñanza-aprendizaje en entornos colaborativos**.
 
