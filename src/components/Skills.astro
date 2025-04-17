@@ -1,6 +1,6 @@
 <section class="habilidades" id="habilidades">
     <div class="div4">
-        <h3><strong>Habilidades</strong></h3>
+        <h3 class="title"><strong>Habilidades</strong></h3>
         <div class="container_cards">
             <div class="container_frontend">
                 <div class="card_frontend color_card">
@@ -279,6 +279,14 @@
         flex-direction: column;
         width: 75%;
         margin-top: 4%;
+    }
+    .title {
+        view-timeline-name: --title;
+        view-timeline-axis: block;
+        animation-timeline: --title;
+        animation-name: showLeft;
+        animation-range: entry 10% cover 45%;
+        animation-fill-mode: both;
     }
     .container_cards {
         display: flex;
