@@ -110,6 +110,19 @@ const projectsOrdenados = projects.sort(
     </div>
 </section>
 <style>
+    @keyframes showLeft {
+        from {
+            opacity: 0;
+            transform: translateX(
+                -20%
+            ); /* Empieza fuera de la pantalla hacia la izquierda */
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(0); /* Se mueve a su posición original */
+        }
+    }
     .proyectos {
         display: flex;
         justify-content: center;
@@ -122,6 +135,17 @@ const projectsOrdenados = projects.sort(
         width: 75%;
         margin-top: 5%;
     }
+
+    .div3 {
+        view-timeline-name: --div3;
+        view-timeline-axis: block;
+
+        animation-timeline: --div3;
+        animation-name: showLeft;
+        animation-range: entry 50% cover 45%;
+        animation-fill-mode: both;
+    }
+
     .container_proyectos {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -129,19 +153,6 @@ const projectsOrdenados = projects.sort(
         justify-items: center;
     }
 
-    @keyframes showLeft {
-        from {
-            opacity: 0;
-            transform: translateX(
-                -20%
-            ); /* Empieza fuera de la pantalla hacia la izquierda */
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0); /* Se mueve a su posición original */
-        }
-    }
 
     .vermas {
         text-decoration: none;
@@ -278,6 +289,15 @@ const projectsOrdenados = projects.sort(
                 opacity: 1;
                 scale: 100%;
             }
+        }
+        .div3 {
+            view-timeline-name: --div3;
+            view-timeline-axis: block;
+
+            animation-timeline: --div3;
+            animation-name: show;
+            animation-range: entry 1% cover 45%;
+            animation-fill-mode: both;
         }
         .card {
             view-timeline-name: --tarjeta;
