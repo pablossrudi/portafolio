@@ -57,11 +57,13 @@ button {
 }
 
 .prevM {
-  left: -5%;
+  left: 25px;
+  z-index: 10;
 }
 
 .nextM {
-  right: -5%;
+  right: 25px;
+  z-index: 10;
 }
 
 button:hover {
@@ -78,7 +80,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 8;
 }
 
 .modal-content {
@@ -86,6 +88,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 8;
 }
 
 .modal-image {
@@ -95,7 +98,7 @@ button:hover {
 
 .close {
   position: absolute;
-  top: 1px;
+  top: 26px;
   right: 26px;
   background: rgba(0, 0, 0, 0.8);
   color: white;
@@ -103,16 +106,17 @@ button:hover {
   font-size: 1.5rem;
   padding: 0.5rem;
   cursor: pointer;
+  z-index: 9;
 }
 
 @media (max-width: 1120px) {
   .prevM {
-    left: -1%;
+    left: 1%;
   }
   
   .nextM {
-    right: -1%;
-  }
+    right: 1%;
+  } 
 
   .carousel-container {
     flex-direction: column;

@@ -84,22 +84,22 @@ const Carrusel = ({ images }) => {
       </button>
 
       {isModalOpen && (
-        <div className="modal" onClick={closeModal}>
+        <div className="modal">
+          <button className="close" onClick={closeModal}>
+            <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/ffffff/multiply.png" alt="multiply" />
+          </button>
+          <button className="prevM" onClick={prevImage}>
+            &#10094;
+          </button>
+          <button className="nextM" onClick={nextImage}>
+            &#10095;
+          </button>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="prevM" onClick={prevImage}>
-              &#10094;
-            </button>
             <img
               src={images[currentIndex]}
               alt="Imagen Completa"
               className="modal-image"
             />
-            <button className="nextM" onClick={nextImage}>
-              &#10095;
-            </button>
-            <button className="close" onClick={closeModal}>
-            <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/ffffff/multiply.png" alt="multiply"/>
-            </button>
           </div>
         </div>
       )}
