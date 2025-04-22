@@ -3,6 +3,8 @@ titulo: SeutilsUBB
 enlaces:
     texto:
         - figma
+    link: 
+        - https://www.figma.com/design/Nzy6GNYKnYvIxgvmFhBskQ/SeutilsUBB?node-id=1-127&t=ph7g8PYhMoUdPF7g-1
     iconos: 
         - https://img.icons8.com/ios-filled/50/ffffff/figma--v1.png
 descripcion: Aplicación web para gestionar trabajos grupales de alumnos en ramos de la Universidad del Bío-Bío.

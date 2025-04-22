@@ -35,7 +35,6 @@ const images = imgs ? imgs.map((img: string) => img) : [];
                     {
                         tecnologias.texto?.map(
                             (nombre: string, index: number) => {
-                                
                                 const icono = tecnologias.iconos
                                     ? tecnologias.iconos[index]
                                     : null;
@@ -71,6 +70,9 @@ const images = imgs ? imgs.map((img: string) => img) : [];
                                     const icono = enlaces.iconos
                                         ? enlaces.iconos[index]
                                         : null;
+                                    const link = enlaces.link
+                                        ? enlaces.link[index]
+                                        : null;
                                     return icono ? (
                                         <div
                                             id={nombre}
@@ -82,8 +84,8 @@ const images = imgs ? imgs.map((img: string) => img) : [];
                                                     height="24"
                                                     src={icono}
                                                     alt={nombre}
-                                                />
-                                                <span>{nombre}</span>
+                                                />                                               
+                                                <a href={`${link}`} target="_blank">{nombre}</a>                                               
                                             </>
                                         </div>
                                     ) : null;
@@ -130,7 +132,7 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             /* align-items: baseline; */
             width: 650px;
             flex-direction: column;
-            float: left;   
+            float: left;
         }
         .imagen {
             width: 100%;
@@ -189,12 +191,26 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             text-align: center;
             margin-left: 2px;
         }
+        .social-btn a {
+            text-decoration: none;
+            color: white;
+            width: 0px;
+            overflow: hidden;
+            transition: 0.3s;
+            text-align: center;
+            margin-left: 2px;
+        }
 
         .social-btn:hover {
             width: 150px;
         }
 
         .social-btn:hover span {
+            padding: 2px;
+            width: 80px;
+        }
+        .social-btn:hover a {
+            text-decoration: none;
             padding: 2px;
             width: 80px;
         }
@@ -209,6 +225,10 @@ const images = imgs ? imgs.map((img: string) => img) : [];
             margin-bottom: 6%;
         }
 
+        /* .link {
+            text-decoration: none;
+        }
+ */
         @media (max-width: 800px) {
             .container {
                 flex-direction: column;

@@ -7,6 +7,7 @@ const proyectos = defineCollection({
         titulo: z.string(),
         enlaces: z.object({
             texto: z.array(z.string().url()).nullable(),
+            link: z.array(z.string().url()).nullable(),
             iconos: z.array(z.string().url()).nullable(),
         }),
         descripcion: z.string(),
