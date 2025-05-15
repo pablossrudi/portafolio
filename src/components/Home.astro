@@ -48,7 +48,7 @@
             >
         </div>
     </div>
-    <img class="gif" src="src/assets/images/yo.png" alt="foto de perfil" />
+    <img class="img-perfil" src="src/assets/images/yo.webp" alt="foto de perfil" />
 
     <div class="container-scroll-btn">
         <a href="#sobre_mi" class="scroll-text">
@@ -354,27 +354,36 @@
         margin-top: 3.5rem;
         margin-bottom: 1.8rem;
     }
-    .gif {
+
+    .img-perfil {
         position: absolute;
         bottom: 1;
-        right: 2%;
+        right: 4%;
         margin-right: 7.1%;
         margin-bottom: 1.5%;
         width: 30vw;
-        border-radius: 30%;
-        mask-image: linear-gradient(to bottom, black 55%, transparent 98%);
-        transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+        border-radius: 30%; 
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
         filter: drop-shadow(
-            0px 0px 4px rgba(255,255,255, 0.5)
+            0px 0px 5px rgba(255,255,255, 0.5)
         );
+        animation: slideInRight 1s ease-out;
     }
 
-    .gif:hover {
-        transform: scale(1.005);
+
+    @keyframes slideInRight {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
     @media (max-width: 1150px) {
-        .gif {
+        .img-perfil {
             bottom: 2%;
             right: 0;
         }
