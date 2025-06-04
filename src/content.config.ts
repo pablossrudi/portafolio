@@ -20,4 +20,6 @@ const proyectos = defineCollection({
     })
 })
 
-export const collections = proyectos;
+export const collections = {
+    'projects': proyectos
+};
