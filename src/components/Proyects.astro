@@ -12,17 +12,17 @@ const projectsOrdenados = projects.sort(
         <h3><strong>Proyectos</strong></h3>
         <div class="container_proyectos">
             {
-                projectsOrdenados.map((projects: any) => {
-                    const { data, slug } = projects;
+                projectsOrdenados.map((project: any) => {
+                    const { data, id } = project;
                     const { titulo, enlaces, descripcion, img, tecnologias } =
                         data;
 
                     return (
                         <article class="card">
                             <div>
-                                <a href={`/proyectos/${slug}`}>
+                                <a href={`/proyectos/${project.id}`}>
                                     <img
-                                        transition:name={`img-${slug}`}
+                                        transition:name={`img-${project.id}`}
                                         class="imagen"
                                         src={img}
                                         alt="wosubb"
@@ -34,11 +34,11 @@ const projectsOrdenados = projects.sort(
                                     <h4>{titulo}</h4>
 
                                     <div
-                                        id={slug}
+                                        id={id}
                                         class="social-btn flex-center"
                                     >
                                         <a
-                                            href={`/proyectos/${slug}`}
+                                            href={`/proyectos/${project.id}`}
                                             class="vermas"
                                         >
                                             <p class="pIcon">Ver más</p>
@@ -52,28 +52,6 @@ const projectsOrdenados = projects.sort(
                                             class="more"
                                         />
                                     </div>
-
-                                    {/* {enlaces.texto?.map(
-                                        (enlace: string, index: number) => {
-                                            const icono = enlaces.iconos
-                                                ? enlaces.iconos[index]
-                                                : null;
-                                            return icono ? (
-                                                <a
-                                                    href={enlace}
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                >
-                                                    <img
-                                                        width="30"
-                                                        height="30"
-                                                        src={icono}
-                                                        alt={enlace}
-                                                    />
-                                                </a>
-                                            ) : null;
-                                        },
-                                    )} */}
                                 </div>
                                 <div class="descripcion">
                                     <p>{descripcion}</p>

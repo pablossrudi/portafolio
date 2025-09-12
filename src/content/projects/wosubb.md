@@ -1,8 +1,8 @@
 ---
 titulo: WOSUBB
 enlaces:
-    texto:
-    iconos:
+    texto: []
+    iconos: []
 descripcion: App diseñada para que la comunidad de la Universidad del Bío-Bío pueda crear alertas de seguridad en el perímetro de la institución y mostrarlas en el mapa.
 img: src/assets/images/wosubb1.webp
 imgs: 

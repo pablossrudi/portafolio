@@ -7,14 +7,14 @@ export async function getStaticPaths() {
     const projects = await getCollection("projects");
     return projects.map((project: any) => ({
         params: {
-            id: project.slug,
+            id: project.id,
         },
         props: { project },
     }));
 }
 
 const { project } = Astro.props;
-const { data, slug } = project;
+const { data, id } = project;
 const { titulo, enlaces, descripcion, img, imgs, tecnologias } = data;
 
 const { Content } = await render(project);
@@ -26,7 +26,7 @@ const images = imgs ? imgs.map((img: string) => img) : [];
         <div class="container">
             <aside class="containerDescription">
                 <img
-                    transition:name={`img-${slug}`}
+                    transition:name={`img-${id}`}
                     class="imagen"
                     src={`../${img}`}
                     alt={titulo}
