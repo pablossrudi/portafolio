@@ -1,0 +1,32 @@
+services:
+  # Desarrollo con hot-reload
+  dev:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app:delegated
+      # Evita que node_modules se cree en tu host con permisos root:
+      - node_modules:/app/node_modules
+    command: sh -lc "npm ci --no-audit --no-fund && npx astro dev --host --port 4321"
+    ports:
+      - "4321:4321"
+    # environment:
+      # Si tienes variables de entorno, puedes definirlas aquí o bien usar un .env
+      # ASTRO_TELEMETRY_DISABLED: "1"
+    # Si usas private registries, añade Auth/SSH según tu caso
+
+  # Producción con Nginx (usa el Dockerfile multi-stage)
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    # Si tu build usa variables de entorno en tiempo de build, define aquí:
+    # args:
+    #   - VITE_API_URL=https://api.midominio.com
+    # environment:
+    #   - NODE_ENV=production
+
+volumes:
+  node_modules:
